@@ -237,35 +237,6 @@ WMIC computersystem where name="%computername%" call rename name="SDPdv01"
                 </InfoBox>
               </div>
             </StepCard>
-
-            <StepCard step={2} title="Configurar permissões do executável" important>
-              <div className="space-y-3">
-                <p>Configurar o atalho do Super para executar com privilégios administrativos:</p>
-                <div>
-                  <p className="font-medium mb-2">Clique com botão direito no atalho do SDPDV:</p>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Propriedades → Avançados → Marcar "Executar como administrador"</li>
-                    <li>• Aba Compatibilidade → Marcar "Executar programa como administrador"</li>
-                  </ul>
-                </div>
-              </div>
-            </StepCard>
-
-            <StepCard step={3} title="Primeira execução do sistema">
-              <div className="space-y-3">
-                <p>Na primeira execução, o sistema pode apresentar erro de formato de moedas:</p>
-                <InfoBox type="warning">
-                  Se aparecer erro de formato de moedas, vá em "Avançados" e altere o formato da moeda.
-                </InfoBox>
-                <p className="text-sm">Depois, configure no Regedit os campos:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>• <strong>APIP</strong> (IP do servidor)</li>
-                  <li>• <strong>Ativador</strong> (mesmo IP do APIP)</li>
-                  <li>• <strong>BDIP</strong> (IP do banco de dados)</li>
-                  <li>• <strong>Filial</strong></li>
-                </ul>
-              </div>
-            </StepCard>
           </div>
         );
 
