@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Book, Monitor, Settings, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import ThemeToggle from "@/components/ThemeToggle";
 import logoSD from "@/assets/logo-sd.png";
 
 interface DocLayoutProps {
@@ -142,6 +143,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
               Guia completo de instalação dos sistemas PDV e Retaguarda
             </p>
           </div>
+          <ThemeToggle />
         </header>
 
         {/* Content */}
