@@ -1,6 +1,56 @@
+import { useState } from "react";
+import { Play } from "lucide-react";
 import StepCard from "./StepCard";
 import CodeBlock from "./CodeBlock";
 import InfoBox from "./InfoBox";
+
+interface VideoCardProps {
+  title: string;
+  videoId: string;
+  description?: string;
+}
+
+const VideoCard = ({ title, videoId, description }: VideoCardProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <div className="bg-background rounded-lg overflow-hidden border border-border hover:border-sd-primary transition-all duration-300 hover:shadow-lg hover:shadow-sd-primary/20">
+      {!isPlaying ? (
+        <div className="relative aspect-video bg-muted cursor-pointer group" onClick={() => setIsPlaying(true)}>
+          <img 
+            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            alt={title}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+            }}
+          />
+          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+            <div className="w-16 h-16 bg-sd-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="aspect-video">
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      )}
+      <div className="p-4">
+        <h3 className="font-semibold text-lg mb-1 text-foreground">{title}</h3>
+        {description && <p className="text-sm text-muted-foreground">{description}</p>}
+      </div>
+    </div>
+  );
+};
 
 interface DocumentationContentProps {
   section: string;
@@ -509,6 +559,138 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
                 </InfoBox>
               </div>
             </StepCard>
+          </div>
+        );
+
+      case 'video-tutorials':
+        return (
+          <div>
+            <h1 className="text-4xl font-bold mb-6 text-sd-primary">Nave do Conhecimento</h1>
+            <InfoBox type="info">
+              <p>Aprenda a utilizar o sistema SD através de nossas videoaulas práticas e objetivas.</p>
+            </InfoBox>
+
+            <div className="space-y-12 mt-8">
+              {/* Cadastros Básicos */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">📚</span> Cadastros Básicos
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard 
+                    title="Cadastro de Clientes"
+                    videoId="8w4rEFLtx6w"
+                    description="Aprenda a cadastrar clientes no sistema"
+                  />
+                  <VideoCard 
+                    title="Cadastro de Grupo de Cliente"
+                    videoId="8w4rEFLtx6w"
+                    description="Organize seus clientes em grupos"
+                  />
+                  <VideoCard 
+                    title="Cadastro de Fornecedores"
+                    videoId="aemZe4o0Yyg"
+                    description="Gerencie seus fornecedores"
+                  />
+                </div>
+              </section>
+
+              {/* Cadastro de Produtos */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">🏷️</span> Cadastro de Produtos
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <VideoCard 
+                    title="Produtos – Nível 1"
+                    videoId="rX2yr1qaNN8"
+                    description="Conceitos básicos"
+                  />
+                  <VideoCard 
+                    title="Produtos – Nível 2"
+                    videoId="LhLsUVFstHg"
+                    description="Recursos intermediários"
+                  />
+                  <VideoCard 
+                    title="Produtos – Nível 3"
+                    videoId="u8XcoaKGC2g"
+                    description="Recursos avançados"
+                  />
+                </div>
+              </section>
+
+              {/* Recebimento de Mercadorias */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">📦</span> Recebimento de Mercadorias
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard title="Manifesto Fiscal" videoId="F0DI4dLVd9o" />
+                  <VideoCard title="Cadastro de Fornecedores" videoId="Asc09p170s8" />
+                  <VideoCard title="Recebimento de Mercadorias" videoId="P2GPc4I2Gic" />
+                  <VideoCard title="Recebimento Manual – Produtor Rural" videoId="Hy578IMufYs" />
+                  <VideoCard title="Devolução de Mercadorias" videoId="OgAa98J8L0M" />
+                  <VideoCard title="Nota de Bonificação" videoId="6dV1HvEC7aM" />
+                  <VideoCard title="Nota MEI (Pessoa Física)" videoId="DGnL0dlV458" />
+                  <VideoCard title="Recebimento – Corte de Carnes" videoId="ve66hBrgjUw" />
+                </div>
+              </section>
+
+              {/* Transferência de Mercadorias */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">🔄</span> Transferência de Mercadorias
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard title="Transferência entre Filiais" videoId="2ExRrG58xzE" />
+                  <VideoCard title="Transferência via SDApp" videoId="5oVtE5T_3U8" />
+                </div>
+              </section>
+
+              {/* Curso Financeiro */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">💰</span> Curso Financeiro – Nível Básico
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard title="Verbas e Centros de Custo" videoId="sjPS1KKGxpI" />
+                  <VideoCard title="Importação de Contas a Pagar" videoId="YX0r1bQwd-8" />
+                  <VideoCard title="Gestão de Contas a Pagar" videoId="FzDzalUF2RI" />
+                  <VideoCard title="Manutenção de Títulos" videoId="uylZ94Dr98c" />
+                  <VideoCard title="Lançamento de Despesas" videoId="TMK3AYbUSAc" />
+                </div>
+              </section>
+
+              {/* Módulo Fiscal */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">📋</span> Curso Módulo Fiscal
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard title="Preparação do Ambiente" videoId="PsypLno1dTg" />
+                  <VideoCard title="Manifesto do Destinatário" videoId="0s58NtxD5iI" />
+                  <VideoCard title="Entradas Fiscais" videoId="XKag-1tOc9s" />
+                  <VideoCard title="Conferência de Entradas" videoId="4j6uCKVL_sk" />
+                  <VideoCard title="Emissão e Manutenção de Notas" videoId="wAT_XL8t1-4" />
+                  <VideoCard title="Escrituração Fiscal" videoId="gclAYezEGVg" />
+                </div>
+              </section>
+
+              {/* Gestão de Estoque */}
+              <section className="bg-card p-6 rounded-lg border border-border">
+                <h2 className="text-2xl font-bold mb-4 text-sd-primary flex items-center gap-2">
+                  <span className="text-3xl">📊</span> Gestão de Estoque – Nível Básico
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <VideoCard title="Perda e Consumo" videoId="9FfAMeZNiy4" />
+                  <VideoCard title="Movimentações via SDApp" videoId="wC_W0VGWa3c" />
+                  <VideoCard title="Inventário via SDSuper" videoId="jZj_2yfmg3o" />
+                  <VideoCard title="Inventário via SDApp" videoId="jZj_2yfmg3o" />
+                  <VideoCard title="Kits e Cestas Básicas" videoId="irJIbjSti8M" />
+                  <VideoCard title="Receitas e Produção" videoId="_xYbma1rmEc" />
+                </div>
+              </section>
+            </div>
           </div>
         );
 

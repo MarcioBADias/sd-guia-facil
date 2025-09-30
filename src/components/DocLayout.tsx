@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench } from "lucide-react";
+import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -51,6 +51,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       icon: Wrench,
       items: [
         { id: "pdv-slowness", title: "Lentidão no PDV" }
+      ]
+    },
+    {
+      id: "training",
+      title: "Nave do Conhecimento",
+      icon: GraduationCap,
+      items: [
+        { id: "video-tutorials", title: "Videoaulas" }
       ]
     }
   ];
