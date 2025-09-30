@@ -422,62 +422,91 @@ F - Fechar caixa
             <h1 className="text-3xl font-bold">Configurações Finais</h1>
 
             <StepCard step={1} title="Configurações Fiscais" important>
-              <div className="space-y-3">
-                <p>Assim que o Super abrir, configure o módulo fiscal:</p>
+...
+            </StepCard>
+          </div>
+        );
+
+      case "pdv-slowness":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold">Solução de Lentidão no PDV</h1>
+            
+            <InfoBox type="warning" title="Importante">
+              Execute estes procedimentos quando o PDV estiver apresentando lentidão.
+              Os comandos devem ser executados com privilégios de administrador.
+            </InfoBox>
+
+            <StepCard step={1} title="Remover aplicativos nativos do Windows" important>
+              <div className="space-y-4">
+                <p className="mb-3">
+                  O comando abaixo elimina por completo todos os aplicativos que você não usa no Windows 10, 
+                  são eles aplicativos nativos do sistema como por exemplo: Bing, Filmes e TV, Cortana e outros. 
+                  Juntando todos dá quase 40 aplicativos.
+                </p>
+                
                 <div>
-                  <p className="font-medium mb-2">Caminho:</p>
-                  <CodeBlock>FISCAL → NF → CONFIGURAÇÕES</CodeBlock>
+                  <p className="font-medium mb-2">1.1 - Abrir Windows PowerShell como administrador:</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Clique com botão direito no menu Iniciar → Windows PowerShell (Admin)
+                  </p>
                 </div>
-                <InfoBox type="info">
-                  Confirme as instalações solicitadas. O Super pode fechar sozinho após as configurações - isso é normal.
-                  Abra novamente após o fechamento.
-                </InfoBox>
+
+                <div>
+                  <p className="font-medium mb-2">1.2 - Remover TODOS os aplicativos nativos:</p>
+                  <CodeBlock title="Comando PowerShell - Remove todos os apps">
+Get-AppxPackage | Remove-AppxPackage
+                  </CodeBlock>
+                </div>
+
+                <div className="mt-4">
+                  <p className="font-medium mb-2">1.3 - Ou remover mantendo apenas a Microsoft Store:</p>
+                  <CodeBlock title="Comando PowerShell - Mantém Store">
+{`Get-AppxPackage | where-object {$_.name -notlike "*store*"} | Remove-AppxPackage`}
+                  </CodeBlock>
+                  <InfoBox type="tip">
+                    Use este segundo comando se precisar manter a Microsoft Store instalada.
+                  </InfoBox>
+                </div>
               </div>
             </StepCard>
 
-            <StepCard step={2} title="Configurar periféricos">
-              <div className="space-y-3">
-                <p>Configure impressoras e outros periféricos:</p>
+            <StepCard step={2} title="Desabilitar serviço de agendamento de tarefas" important>
+              <div className="space-y-4">
+                <p className="mb-3">
+                  Alterar a inicialização do serviço Schedule do Windows para melhorar o desempenho:
+                </p>
+                
                 <div>
-                  <p className="font-medium mb-2">Caminho:</p>
-                  <CodeBlock>CONTROLE → COMPUTADOR → PERIFÉRICOS</CodeBlock>
+                  <p className="font-medium mb-2">2.1 - Abrir o Editor de Registro:</p>
+                  <CodeBlock title="Comando para abrir o Regedit">WIN+R → digite "regedit"</CodeBlock>
                 </div>
-                <p className="text-sm">No último campo "IMPRESSORAS", selecionar "Impressora do Windows".</p>
-              </div>
-            </StepCard>
 
-            <StepCard step={3} title="Finalizar e testar" important>
-              <div className="space-y-3">
-                <p>Para finalizar a instalação:</p>
                 <div>
-                  <p className="font-medium mb-2">Atualização:</p>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Ir em "ATUALIZAR"</li>
-                    <li>• Fazer ping para os PDVs</li>
-                    <li>• Confirmar comunicação</li>
+                  <p className="font-medium mb-2">2.2 - Navegar até o caminho:</p>
+                  <CodeBlock title="Caminho no Registro">
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
+                  </CodeBlock>
+                </div>
+
+                <div>
+                  <p className="font-medium mb-2">2.3 - Alterar o valor:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Localizar a chave <code className="bg-muted px-1 py-0.5 rounded">start</code></li>
+                    <li>• Duplo clique em <code className="bg-muted px-1 py-0.5 rounded">start</code></li>
+                    <li>• Alterar o valor de <strong>2</strong> para <strong>4</strong></li>
+                    <li>• Clicar em OK</li>
                   </ul>
                 </div>
-                <InfoBox type="success" title="Instalação concluída!">
-                  Super instalado com sucesso. Teste todas as funcionalidades antes de finalizar.
+
+                <InfoBox type="info">
+                  O valor 4 significa "Desabilitado". Isso impedirá que o serviço de agendamento 
+                  consuma recursos desnecessários do sistema.
                 </InfoBox>
-              </div>
-            </StepCard>
 
-            <StepCard step={4} title="Formulário de instalação">
-              <div className="space-y-3">
-                <p>Para facilitar futuras instalações, mantenha estas informações:</p>
-                <CodeBlock title="Dados necessários para instalação">
-Nome do cliente:
-Número do PDV:
-Modelo da impressora:
-Modelo do PinPad:
-Marca da balança:
-CNPJ:
-Usuário do Windows é administrador? ( ) Sim ( ) Não
-
-TeamViewer ID:
-Senha TeamViewer: SD@info1525
-                </CodeBlock>
+                <InfoBox type="warning">
+                  Após fazer estas alterações, reinicie o computador para que as mudanças tenham efeito.
+                </InfoBox>
               </div>
             </StepCard>
           </div>
