@@ -475,7 +475,22 @@ F - Fechar caixa
             <h1 className="text-3xl font-bold">Configurações Finais</h1>
 
             <StepCard step={1} title="Configurações Fiscais" important>
-...
+              <div className="space-y-3">
+                <p>Abra o Super como Administrador e siga os passos abaixo:</p>
+                 <ul className="space-y-1 text-sm">
+                  <li>• <code className="bg-muted px-1 py-0.5 rounded">Fiscal → NF-e → Configurações</code></li>
+                  <li>• Deixa efetuar os carregamentos até que ele feche o Super e então pode reabrir.</li>
+                </ul>
+                 </div>
+            </StepCard>
+            <StepCard step={2} title="Configurando Impressora" important>
+              <div className="space-y-3">
+                <p>Abra o Super como Administrador e siga os passos abaixo:</p>
+                 <ul className="space-y-1 text-sm">
+                  <li>• <code className="bg-muted px-1 py-0.5 rounded">Controle → Computador → Periféricos</code></li>
+                  <li>• Selecione a opção <strong>IMPRESSORA DO WINDOWS</strong> em <strong>ETIQUETAS</strong></li>
+                </ul>
+                 </div>
             </StepCard>
           </div>
         );
