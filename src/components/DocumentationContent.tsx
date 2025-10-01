@@ -330,6 +330,9 @@ WMIC computersystem where name="%computername%" call rename name="SDPdv01"
             <StepCard step={3} title="Instalação Gsurf (se necessário)">
               <div className="space-y-3">
                 <p>Se o cliente usar Gsurf, configure o sistema:</p>
+                <CodeBlock title="Portal Gsurf">
+                  https://cdp.gsurfnet.com/
+                </CodeBlock>
                 <CodeBlock title="Credenciais Gsurf">
 Login: Fernando_Silva
 Senha: SD@123!@#
