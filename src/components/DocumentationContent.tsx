@@ -580,6 +580,59 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
           </div>
         );
 
+        case "vnc-error":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold">Solução: Erro no VNC</h1>
+            
+            <InfoBox type="warning" title="Atenção">
+              Este procedimento irá reinstalar o serviço VNC no computador. É necessário ter privilégios de administrador.
+            </InfoBox>
+
+            <StepCard step={1} title="Parar Serviço SDRemoto" important>
+              <p className="mb-3">Pare o serviço do SDRemoto para iniciar o procedimento:</p>
+              <ul className="space-y-2 text-sm">
+                <li>• Abra o Gerenciador de Serviços (<code className="bg-muted px-1 py-0.5 rounded">services.msc</code>).</li>
+                <li>• Localize e selecione o serviço chamado <code className="bg-muted px-1 py-0.5 rounded">SDRemoto</code>.</li>
+                <li>• Clique em <strong className="font-semibold">Parar</strong> para encerrar o serviço.</li>
+              </ul>
+            </StepCard>
+
+            <StepCard step={2} title="Reinstalar UVNC Remoto" important>
+              <div className="space-y-3">
+                <p>Navegue até a pasta do SD Remoto e reinstale o serviço VNC:</p>
+                
+                <div>
+                  <p className="font-medium mb-2">2.1 - Localizar o executável:</p>
+                  <CodeBlock title="Caminho do arquivo">
+                    C:\windows\SD Remoto\UVNCRemoto.exe
+                  </CodeBlock>
+                </div>
+                
+                <div>
+                  <p className="font-medium mb-2">2.2 - Desinstalar, Instalar e Iniciar:</p>
+                  <p className="text-sm">Com o <code className="bg-muted px-1 py-0.5 rounded">UVNCRemoto.exe</code> em mãos, siga os passos:</p>
+                  <ol className="list-decimal list-inside ml-4 space-y-1 text-sm">
+                    <li>Clique em <strong className="font-semibold">Uninstall</strong>.</li>
+                    <li>Clique em <strong className="font-semibold">Install</strong>.</li>
+                    <li>Clique em <strong className="font-semibold">Start</strong> para iniciar o novo serviço.</li>
+                  </ol>
+                </div>
+              </div>
+            </StepCard>
+            
+            <StepCard step={3} title="Teste Final" status="success">
+              <p>O serviço VNC foi reinstalado. Agora, teste a conexão remota:</p>
+              <ul className="space-y-2 text-sm">
+                <li>• Testar o VNC novamente pelo SD Super.</li>
+             </ul>
+             <InfoBox type="success">
+                Se o acesso funcionar, o problema foi resolvido.
+              </InfoBox>
+            </StepCard>
+          </div>
+        );
+
       case 'video-tutorials':
         return (
           <div>
