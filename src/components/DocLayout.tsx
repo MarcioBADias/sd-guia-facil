@@ -42,7 +42,8 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       items: [
         { id: "retaguarda-install", title: "Instalação" },
         { id: "retaguarda-config", title: "Configuração" },
-        { id: "retaguarda-final", title: "Configurações Finais" }
+        { id: "retaguarda-final", title: "Configurações Finais" },
+        { id: "retaguarda-acerto-fiscal", title: "Acerto Fiscal" }
       ]
     },
     {
