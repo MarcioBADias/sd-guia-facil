@@ -138,7 +138,7 @@ const DocumentationContent = ({ section }: DocumentationContentProps) => {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium mb-2">1.1 - Abrir configurações de usuário:</p>
-                  <CodeBlock title="Comando para abrir gerenciador de usuários">WIN+R → digite "netplwiz"</CodeBlock>
+                  <CodeBlock title="Comando para abrir gerenciador de usuários">WIN R → digite "netplwiz"</CodeBlock>
                 </div>
                 <div>
                   <p className="font-medium mb-2">1.2 - Ativar usuário administrador:</p>
@@ -155,9 +155,9 @@ const DocumentationContent = ({ section }: DocumentationContentProps) => {
               </div>
             </StepCard>
 
-            <StepCard step={2} title="Criar pasta PDV+">
+            <StepCard step={2} title="Criar pasta PDV ">
               <p className="mb-3">Criar uma pasta específica para o sistema:</p>
-              <CodeBlock title="Localização da pasta">C:\PDV+</CodeBlock>
+              <CodeBlock title="Localização da pasta">C:\PDV </CodeBlock>
               <InfoBox type="tip">
                 Esta pasta será usada para armazenar arquivos temporários e configurações do sistema.
               </InfoBox>
@@ -354,7 +354,7 @@ Senha: SD@info1525
               <div className="space-y-3">
                 <p>Realizar teste completo de venda:</p>
                 <CodeBlock title="Comandos do PDV">
-A - Abrir caixa (senha: +1 HORA +1 MES +1 ANO)
+A - Abrir caixa (senha:  1 HORA  1 MES  1 ANO)
 M - Ativar caixa
 F1 - Abrir venda
 J - Fechar venda
@@ -396,7 +396,7 @@ F - Fechar caixa
             <StepCard step={2} title="Verificar conectividade do servidor">
               <div className="space-y-3">
                 <p>Confirmar se o servidor Windows está acessível:</p>
-                <CodeBlock title="Teste de conectividade">WIN+R → \\ip_do_servidor_win\SDProgs$</CodeBlock>
+                <CodeBlock title="Teste de conectividade">WIN R → \\ip_do_servidor_win\SDProgs$</CodeBlock>
                 <InfoBox type="warning" title="Se não abrir">
                   Configure as credenciais pelo Gerenciador de Credenciais:
                   <br />• IP: ip_do_servidor
@@ -423,6 +423,133 @@ F - Fechar caixa
             </StepCard>
           </div>
         );
+
+        case "retaguarda-acerto-fiscal":
+         return (
+           <div className="space-y-6">
+             <h1 className="text-3xl font-bold">Instalação e Configuração: Acerto Fiscal</h1>
+             
+             <InfoBox type="info" title="Visão Geral">
+               <p>Neste artigo, você aprenderá a realizar a integração do Acerto Fiscal via API. É fundamental solicitar previamente que a equipe do Acerto Fiscal habilite a integração antes de iniciar.</p>
+               <p className="mt-2"><strong>Atenção:</strong> No arquivo <code className="bg-muted px-1 py-0.5 rounded">SDTributário.ini</code>, tenha cuidado para não apagar os símbolos <code className="bg-muted px-1 py-0.5 rounded">;</code>, pois eles são essenciais para evitar erros de execução do SDTributário.</p>
+             </InfoBox>
+ 
+             <h2 className="text-xl font-semibold mt-4">Requisitos de Versão Mínima do Sistema</h2>
+             <ul className="space-y-1 text-sm text-muted-foreground ml-4 list-disc">
+               <li>SDSuper: 2471</li>
+               <li>SDSuperx: 482</li>
+               <li>SDAtualizador: 12442</li>
+               <li>SDTributario: 31</li>
+             </ul>
+             <InfoBox type="tip">
+               Arquivo de referência: <code className="bg-muted px-1 py-0.5 rounded">Versao Acerto Fiscal.zip</code> (07 out. 2025, 02:29 PM).
+             </InfoBox>
+ 
+             <StepCard step={1} title="Configuração Inicial da API no SD Super" important>
+               <div className="space-y-3">
+                 <p>
+                   Após atualizar o cliente com as versões mínimas, verifique se os arquivos de instalação estão na pasta <code className="bg-muted px-1 py-0.5 rounded">Programas</code> do servidor ou se o sistema já está atualizado.
+                 </p>
+                 
+                 <p className="font-medium mb-2">1.1 - Acessar Interfaces Externas:</p>
+                 <p className="text-sm text-muted-foreground">
+                   Vá para o caminho: <code className="bg-muted px-1 py-0.5 rounded">Controle → Computador → Interfaces Externas</code>.
+                 </p>
+                 
+                 <p className="font-medium mb-2">1.2 - Inserir Credenciais e Habilitar API:</p>
+                 <p className="text-sm text-muted-foreground">
+                   Confirme o **ID e Token do cliente** junto ao Acerto Fiscal e preencha nos campos.
+                 </p>
+                 <InfoBox type="info">
+                   Marque a opção <strong className="font-semibold">Usar Api</strong> e clique em <strong className="font-semibold">Enviar Todos os Produtos</strong>.
+                 </InfoBox>
+                 <img 
+                   src="image_b39ddc.png" 
+                   alt="Tela de Alterar Interfaces Externas Filial 1 com a opção 'Usar Api' marcada" 
+                   className="max-w-xs border rounded-md shadow-lg"
+                 />
+                 <p className="text-sm text-muted-foreground">
+                   Após esse passo, a correção manual de itens já estará funcional.
+                 </p>
+               </div>
+             </StepCard>
+ 
+             <StepCard step={2} title="Configuração do SDTributario.ini para Correção Automática" important>
+               <div className="space-y-3">
+                 <p>
+                   O arquivo <code className="bg-muted px-1 py-0.5 rounded">SDTributario.ini</code> é necessário para a correção automática de produtos.
+                 </p>
+                 
+                 <p className="font-medium mb-2">2.1 - Verificar configurações essenciais:</p>
+                 <ul className="space-y-1 text-sm">
+                   <li>• Verifique a <code className="bg-muted px-1 py-0.5 rounded">idFilial</code> padrão.</li>
+                   <li>• Verifique o <code className="bg-muted px-1 py-0.5 rounded">Server</code> e <code className="bg-muted px-1 py-0.5 rounded">ipServidorDados</code> (IP e Caminho para o banco).</li>
+                   <li>• O CNPJ da filial padrão é definido na chave <code className="bg-muted px-1 py-0.5 rounded">docEmpresa</code>.</li>
+                 </ul>
+ 
+                 <InfoBox type="warning" title="Atenção ao Ambiente">
+                   No exemplo abaixo, o cliente está no LINUX e a letra do servidor Windows é C. Ajuste o <code className="bg-muted px-1 py-0.5 rounded">letraBanco</code> e <code className="bg-muted px-1 py-0.5 rounded">servidorLinux</code> caso o banco esteja no WINDOWS ou se a letra seja diferente.
+                 </InfoBox>
+ 
+                 <img 
+                   src="image_b39d7d.png" 
+                   alt="Conteúdo do arquivo SDTributario.ini com IPs e configurações de banco" 
+                   className="max-w-full border rounded-md shadow-lg"
+                 />
+                 <img 
+                   src="image_b39d9b.png" 
+                   alt="Conteúdo do arquivo SDTributario.ini mostrando idFilial e nomeComputador" 
+                   className="max-w-full border rounded-md shadow-lg"
+                 />
+                  <img 
+                   src="image_b39d58.png" 
+                   alt="Conteúdo do arquivo SDTributario.ini mostrando docEmpresa e outras configurações" 
+                   className="max-w-full border rounded-md shadow-lg"
+                 />
+               </div>
+             </StepCard>
+             
+             <StepCard step={3} title="Executar o SDTributario.exe" important>
+               <div className="space-y-3">
+                 <p>
+                   Crie um atalho do <code className="bg-muted px-1 py-0.5 rounded">SDTributario.exe</code> na área de trabalho e configure-o para <strong className="font-semibold">Executar como Administrador</strong>.
+                   Após todas as configurações, basta abrir o SDTributário para iniciar a atualização automática de produtos.
+                 </p>
+               </div>
+             </StepCard>
+ 
+             <StepCard step={4} title="Solução de Problemas Comuns" status="warning">
+               <div className="space-y-3">
+                 <p className="font-medium mb-2">A - Erro "Failed to load dynlib/dll 'C:\Windows\system32\fbclient.dll'"</p>
+                 <p className="text-sm text-muted-foreground">
+                   Se este erro ocorrer durante a atualização de produtos, é necessário colocar as DLLs do arquivo <code className="bg-muted px-1 py-0.5 rounded">dllsfirebird64.rar</code> (30 set. 2025, 03:19 PM) na pasta <code className="bg-muted px-1 py-0.5 rounded">System32</code>.
+                 </p>
+                 <img 
+                   src="image_b39a15.png" 
+                   alt="Mensagem de erro 'Failed to load dynlib/dll 'C:\\Windows\\system32\\fbclient.dll''" 
+                   className="max-w-full border rounded-md shadow-lg"
+                 />
+ 
+                 <p className="font-medium mt-4 mb-2">B - Erro "Integração desabilitada via WebService"</p>
+                 <p className="text-sm text-muted-foreground">
+                   Outro problema comum é a mensagem "Integração desabilitada via WebService. Entre em contato com o administrador". A correção é solicitar a atualização do **TOKEN do cliente** no SD Super.
+                 </p>
+                  <img 
+                   src="image_b399f3.png" 
+                   alt="Mensagens de erro 'Integração desabilitada via WebService'" 
+                   className="max-w-full border rounded-md shadow-lg"
+                 />
+               </div>
+             </StepCard>
+             
+             <InfoBox type="destructive" title="Alerta Final (Corretor Fiscal Instalado)">
+               <p>
+                 Se o servidor já possuir o **Corretor Fiscal** instalado, é imprescindível entrar em contato com a equipe do Acerto Fiscal para que eles acessem via AnyDesk e realizem a desinstalação antes de prosseguir com a instalação da API.
+               </p>
+             </InfoBox>
+ 
+           </div>
+         );
 
       case "retaguarda-config":
         return (
@@ -547,7 +674,7 @@ Get-AppxPackage | Remove-AppxPackage
                 
                 <div>
                   <p className="font-medium mb-2">2.1 - Abrir o Editor de Registro:</p>
-                  <CodeBlock title="Comando para abrir o Regedit">WIN+R → digite "regedit"</CodeBlock>
+                  <CodeBlock title="Comando para abrir o Regedit">WIN R → digite "regedit"</CodeBlock>
                 </div>
 
                 <div>
