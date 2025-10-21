@@ -50,7 +50,8 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       title: "Solução de Problemas",
       icon: Wrench,
       items: [
-        { id: "pdv-slowness", title: "Lentidão no PDV" }
+        { id: "pdv-slowness", title: "Lentidão no PDV" },
+        { id: "vnc-error", title: "Erro no VNC" }
       ]
     },
     {
