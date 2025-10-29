@@ -732,7 +732,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
                 <div>
                   <p className="font-medium mb-2">2.1 - Localizar o executável:</p>
                   <CodeBlock title="Caminho do arquivo">
-                    C:\windows\SD Remoto\UVNCRemoto.exe
+                    C:\windows\SDRemoto\UVNCRemoto.exe
                   </CodeBlock>
                 </div>
                 
