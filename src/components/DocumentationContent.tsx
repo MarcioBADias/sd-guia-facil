@@ -962,9 +962,29 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
               </InfoBox>
             </StepCard>
 
+            <StepCard step={2} title="Ativando botão Acerto Fiscal nos produtos">
+              <p className="mb-3">Caso o botão/ícone do Acerto Fiscal não apareça na tela de cadastro de produtos, é necessário ativá-lo nas configurações:</p>
+              <CodeBlock title="Caminho no sistema">
+                {`Controle > Computador > Configurações > aba Produtos`}
+              </CodeBlock>
+              <p className="mt-3 mb-2">No campo <strong>Impostos</strong>, selecione a opção:</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-4 h-4 border-2 border-primary rounded bg-primary/20" />
+                  <strong>Acerto Fiscal</strong>
+                </li>
+              </ul>
+              <InfoBox type="tip">
+                <p>Após selecionar "Acerto Fiscal" no campo Impostos, o botão/ícone do Acerto Fiscal passará a ser exibido na tela de cadastro e alteração de produtos.</p>
+              </InfoBox>
+              <InfoBox type="warning">
+                <p>Se mesmo após a configuração o botão não aparecer, feche e reabra o sistema para que a alteração tenha efeito.</p>
+              </InfoBox>
+            </StepCard>
+
             <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Como Utilizar (Dois Caminhos)</h3>
 
-            <StepCard step={2} title="Caminho A — Revisão Individual (Tela de Alterar Produto)">
+            <StepCard step={3} title="Caminho A — Revisão Individual (Tela de Alterar Produto)">
               <p className="mb-2 text-sm text-muted-foreground">Ideal para cadastrar um item novo ou corrigir uma rejeição de nota específica.</p>
               <ol className="space-y-2 text-sm list-decimal list-inside">
                 <li>Acesse o <strong>cadastro do produto</strong>.</li>
@@ -976,7 +996,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
               </InfoBox>
             </StepCard>
 
-            <StepCard step={3} title="Caminho B — Revisão em Lote (Tela de Manutenção de Produtos)">
+            <StepCard step={4} title="Caminho B — Revisão em Lote (Tela de Manutenção de Produtos)">
               <p className="mb-2 text-sm text-muted-foreground">Ideal para revisão massiva ou revisão periódica.</p>
               <ol className="space-y-2 text-sm list-decimal list-inside">
                 <li>Acesse a tela de <strong>Manutenção de Produtos</strong>.</li>
@@ -989,7 +1009,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
               </InfoBox>
             </StepCard>
 
-            <StepCard step={4} title="Verificar Histórico de Operações">
+            <StepCard step={5} title="Verificar Histórico de Operações">
               <p className="mb-3">Após a revisão, consulte o <strong>Histórico</strong> do produto para ver o resultado:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-green-50 dark:bg-green-900/10 border border-green-200 dark:border-green-900/20 rounded-lg p-4">

@@ -173,7 +173,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         </header>
 
         {/* Content */}
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1 overflow-y-auto min-h-0">
           <div className="max-w-4xl mx-auto p-6">
             {children}
           </div>
