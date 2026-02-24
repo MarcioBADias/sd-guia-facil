@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap } from "lucide-react";
+import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -44,6 +44,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         { id: "retaguarda-config", title: "Configuração" },
         { id: "retaguarda-final", title: "Configurações Finais" },
         { id: "retaguarda-acerto-fiscal", title: "Acerto Fiscal" }
+      ]
+    },
+    {
+      id: "fiscal",
+      title: "Acerto Fiscal Gratuito",
+      icon: FileCheck,
+      items: [
+        { id: "acerto-fiscal-gratuito", title: "Integração NCM/CEST" }
       ]
     },
     {

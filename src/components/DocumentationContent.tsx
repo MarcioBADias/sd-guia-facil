@@ -542,7 +542,7 @@ F - Fechar caixa
                </div>
              </StepCard>
              
-             <InfoBox type="destructive" title="Alerta Final (Corretor Fiscal Instalado)">
+             <InfoBox type="warning" title="Alerta Final (Corretor Fiscal Instalado)">
                <p>
                  Se o servidor já possuir o **Corretor Fiscal** instalado, é imprescindível entrar em contato com a equipe do Acerto Fiscal para que eles acessem via AnyDesk e realizem a desinstalação antes de prosseguir com a instalação da API.
                </p>
@@ -748,7 +748,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
               </div>
             </StepCard>
             
-            <StepCard step={3} title="Teste Final" status="success">
+            <StepCard step={3} title="Teste Final" status="completed">
               <p>O serviço VNC foi reinstalado. Agora, teste a conexão remota:</p>
               <ul className="space-y-2 text-sm">
                 <li>• Testar o VNC novamente pelo SD Super.</li>
@@ -889,6 +889,146 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
                 </div>
               </section>
             </div>
+          </div>
+        );
+
+      case "acerto-fiscal-gratuito":
+        return (
+          <div>
+            <h2 className="text-3xl font-bold mb-2 text-foreground">Integração Acerto Fiscal Gratuito (NCM/CEST)</h2>
+            <p className="text-muted-foreground mb-6">
+              Guia completo para configurar a revisão gratuita de NCM e CEST em parceria com o Acerto Fiscal.
+            </p>
+
+            <InfoBox type="tip" title="Recurso 100% Gratuito">
+              <p>Este recurso permite revisar e corrigir o NCM e CEST dos produtos automaticamente, consultando o código de barras (EAN) na base do Acerto Fiscal. Não requer ativação de chave ou contrato extra.</p>
+            </InfoBox>
+
+            <InfoBox type="info" title="Versões Mínimas Necessárias">
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>SD Super:</strong> v.2543</li>
+                <li><strong>SD SuperX:</strong> v.507</li>
+                <li><strong>SD Tributário:</strong> v.1.0.43</li>
+              </ul>
+            </InfoBox>
+
+            <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">O que o sistema revisa e corrige?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-card border rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-primary mb-2">🇧🇷 Produtos Nacionais</h4>
+                <p className="text-sm text-muted-foreground">Códigos padrão Brasil (iniciados em 789 e 790).</p>
+              </div>
+              <div className="bg-card border rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-primary mb-2">🌍 Produtos Importados</h4>
+                <p className="text-sm text-muted-foreground">Itens vendidos no Brasil com código de origem internacional (padrão GS1).</p>
+              </div>
+              <div className="bg-card border rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-primary mb-2">📦 Caixas e Fardos</h4>
+                <p className="text-sm text-muted-foreground">Códigos logísticos de 14 dígitos (GTIN-14) para atacado/caixa fechada.</p>
+              </div>
+            </div>
+
+            <InfoBox type="warning" title="Trava de Segurança — O sistema NÃO altera:">
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>Códigos Internos (777...):</strong> Produtos cadastrados manualmente pelo SD Super.</li>
+                <li><strong>Balança/Pesáveis (2...):</strong> Produtos de padaria/açougue com códigos variáveis.</li>
+                <li><strong>Códigos Curtos:</strong> Códigos com menos de 8 dígitos (inválidos para fiscal).</li>
+              </ul>
+              <p className="mt-2 text-xs">A trava impede que o sistema sobrescreva um cadastro manual específico feito pelo contador.</p>
+            </InfoBox>
+
+            <StepCard step={1} title="Ativar a Integração" important>
+              <p className="mb-3">Acesse o caminho abaixo no sistema:</p>
+              <CodeBlock title="Caminho no sistema">
+                {`Controle > Computador > Interface Externa > Acerto Fiscal`}
+              </CodeBlock>
+              <p className="mt-3 mb-2">Marque as seguintes opções:</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-4 h-4 border-2 border-primary rounded bg-primary/20" />
+                  <strong>Ativar Integração Gratuita NCM e CEST</strong>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-4 h-4 border-2 border-primary rounded bg-primary/20" />
+                  <strong>Usar API</strong>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-4 h-4 border-2 border-primary rounded bg-primary/20" />
+                  <strong>Usar HTTPS</strong>
+                </li>
+              </ul>
+              <InfoBox type="info">
+                <p>Não é necessário preencher os campos <strong>Id Cliente</strong> e <strong>Token</strong> para a integração gratuita.</p>
+              </InfoBox>
+            </StepCard>
+
+            <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Como Utilizar (Dois Caminhos)</h3>
+
+            <StepCard step={2} title="Caminho A — Revisão Individual (Tela de Alterar Produto)">
+              <p className="mb-2 text-sm text-muted-foreground">Ideal para cadastrar um item novo ou corrigir uma rejeição de nota específica.</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Acesse o <strong>cadastro do produto</strong>.</li>
+                <li>Clique no botão/ícone do <strong>Acerto Fiscal</strong>.</li>
+                <li>O sistema busca os dados e preenche <strong>NCM/CEST</strong> na hora.</li>
+              </ol>
+              <InfoBox type="tip">
+                <p>Se o produto for encontrado, os campos são atualizados automaticamente e a data de revisão é registrada.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={3} title="Caminho B — Revisão em Lote (Tela de Manutenção de Produtos)">
+              <p className="mb-2 text-sm text-muted-foreground">Ideal para revisão massiva ou revisão periódica.</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Acesse a tela de <strong>Manutenção de Produtos</strong>.</li>
+                <li>Selecione um grupo de produtos (ou todos os produtos filtrados).</li>
+                <li>Acione a opção do <strong>Acerto Fiscal</strong>.</li>
+                <li>O sistema processará a lista sequencialmente.</li>
+              </ol>
+              <InfoBox type="warning">
+                <p><strong>Atenção:</strong> Este procedimento não poderá ser desfeito. Confirme antes de prosseguir.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={4} title="Verificar Histórico de Operações">
+              <p className="mb-3">Após a revisão, consulte o <strong>Histórico</strong> do produto para ver o resultado:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-green-50 dark:bg-green-900/10 border border-green-200 dark:border-green-900/20 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 dark:text-green-400 text-sm mb-1">✅ Sucesso</h4>
+                  <p className="text-sm text-muted-foreground">O produto recebe a data de revisão e os campos NCM/CEST são atualizados.</p>
+                </div>
+                <div className="bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-900/20 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-700 dark:text-yellow-400 text-sm mb-1">⚠️ Não Encontrado</h4>
+                  <p className="text-sm text-muted-foreground">O produto não recebe data de revisão, mas é gerado um registro no Histórico informando "Produto não Classificado/Revisado".</p>
+                </div>
+              </div>
+            </StepCard>
+
+            <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Perguntas Frequentes</h3>
+            <div className="space-y-4 mb-6">
+              {[
+                { q: "Preciso ligar para o suporte do Acerto Fiscal para ativar?", a: "Não. O recurso já está disponível nativamente na versão indicada. Basta atualizar o sistema, ter conexão com a internet, ativar em Interface Externa e avisar ao cliente que ele já pode usar." },
+                { q: "É realmente gratuito?", a: "Sim. A consulta de EAN para NCM/CEST é um benefício gratuito que a SD está oferecendo em parceria com o Acerto Fiscal." },
+                { q: "O sistema corrige a Tributação (ICMS/PIS/COFINS) completa?", a: "Não. O foco deste recurso gratuito é o saneamento cadastral base (NCM e CEST). Para tributação estadual completa, consulte as condições comerciais da integração plena." },
+                { q: "Funciona para produtos sem código de barras?", a: "Não. A consulta depende de um código de barras (EAN/GTIN) válido para encontrar o produto na base fiscal." },
+              ].map((faq, i) => (
+                <div key={i} className="bg-card border rounded-lg p-4">
+                  <h4 className="font-semibold text-sm text-foreground mb-1">{i + 1}. {faq.q}</h4>
+                  <p className="text-sm text-muted-foreground">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Boas Práticas</h3>
+            <InfoBox type="tip" title="Dicas para o cliente">
+              <ul className="list-disc list-inside space-y-2">
+                <li>Não tente revisar o cadastro inteiro de uma vez (ex: 50 mil itens) se a internet for instável. Filtre por setor (ex: "Bebidas", depois "Mercearia") na tela de Manutenção.</li>
+                <li>Verifique o <strong>Histórico</strong>: Se o NCM não mudou, peça para o cliente olhar a aba Histórico do produto. Lá estará o motivo (ex: "Já está correto" ou "Ignorado por ser código interno").</li>
+              </ul>
+            </InfoBox>
+
+            <InfoBox type="info" title="Contato Acerto Fiscal">
+              <p>Para classificação tributária completa, entre em contato: <strong>(22) 3851-2302</strong></p>
+            </InfoBox>
           </div>
         );
 
