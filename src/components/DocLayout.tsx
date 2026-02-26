@@ -60,7 +60,8 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       icon: Wrench,
       items: [
         { id: "pdv-slowness", title: "Lentidão no PDV" },
-        { id: "vnc-error", title: "Erro no VNC" }
+        { id: "vnc-error", title: "Erro no VNC" },
+        { id: "biometrico-hamster", title: "Leitor Biométrico Hamster" }
       ]
     },
     {

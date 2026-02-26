@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Download } from "lucide-react";
 import { Play } from "lucide-react";
 import StepCard from "./StepCard";
 import CodeBlock from "./CodeBlock";
@@ -335,7 +336,7 @@ WMIC computersystem where name="%computername%" call rename name="SDPdv01"
                 </CodeBlock>
                 <CodeBlock title="Credenciais Gsurf">
 Login: Fernando_Silva
-Senha: SD@info1525
+Senha: SD@tec0212!@#
                 </CodeBlock>
                 <div>
                   <p className="text-sm">Processo:</p>
@@ -1049,6 +1050,119 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
             <InfoBox type="info" title="Contato Acerto Fiscal">
               <p>Para classificação tributária completa, entre em contato: <strong>(22) 3851-2302</strong></p>
             </InfoBox>
+          </div>
+        );
+
+      case "biometrico-hamster":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold">Instalação do Leitor Biométrico Hamster</h1>
+            
+            <InfoBox type="info" title="Sobre">
+              Este guia orienta a instalação do leitor biométrico Hamster DX / Hamster III da Fingertech (NITGEN) para uso com o sistema SD PDV.
+            </InfoBox>
+
+            <StepCard step={1} title="Baixar os arquivos de instalação" important>
+              <p className="mb-3">Faça o download dos arquivos necessários clicando nos links abaixo:</p>
+              <div className="space-y-2">
+                <a
+                  href="/downloads/Windows-Guia_de_Instalacao_SDK_eNBioBSP.pdf"
+                  download
+                  className="flex items-center gap-2 p-3 rounded-lg border border-border bg-muted/50 hover:bg-muted transition-colors text-sm font-medium text-foreground"
+                >
+                  <Download className="h-4 w-4 text-primary" />
+                  Guia de Instalação SDK eNBioBSP (PDF)
+                </a>
+                <a
+                  href="/downloads/SERIAL.txt"
+                  download
+                  className="flex items-center gap-2 p-3 rounded-lg border border-border bg-muted/50 hover:bg-muted transition-colors text-sm font-medium text-foreground"
+                >
+                  <Download className="h-4 w-4 text-primary" />
+                  SERIAL.txt (Chave de ativação)
+                </a>
+              </div>
+              <InfoBox type="tip">
+                <p>O serial de ativação é: <code className="bg-muted px-1 py-0.5 rounded text-xs">010101-BFA9CA29B815101D-D498379F67E452D8</code></p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={2} title="Instalar o SDK eNBioBSP (setup.exe)" important>
+              <p className="mb-3">Execute o instalador do SDK conforme a arquitetura do sistema:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Dentro da pasta de instalação, entre na pasta <strong>x64</strong> (64 bits) ou <strong>x86</strong> (32 bits).</li>
+                <li>Execute o arquivo <code className="bg-muted px-1 py-0.5 rounded">setup.exe</code> como <strong>Administrador</strong>.</li>
+                <li>Na tela de boas-vindas, clique em <strong>Next</strong>.</li>
+                <li>Aceite os termos clicando em <strong>Yes</strong>.</li>
+                <li>Preencha os campos:
+                  <ul className="list-disc list-inside ml-4 mt-1 space-y-1">
+                    <li><strong>User Name:</strong> nome do usuário</li>
+                    <li><strong>Company Name:</strong> nome da empresa</li>
+                    <li><strong>Serial Number:</strong> cole o conteúdo do arquivo SERIAL.txt</li>
+                  </ul>
+                </li>
+                <li>Clique em <strong>Next</strong> até finalizar a instalação.</li>
+                <li>Se solicitado instalar o <strong>.NET Framework v2.0</strong>, clique em <strong>Sim</strong> e siga Next até o final.</li>
+                <li>Clique em <strong>Finish</strong> para concluir.</li>
+              </ol>
+            </StepCard>
+
+            <StepCard step={3} title="Instalar o Driver do Leitor">
+              <p className="mb-3">Instale o driver específico do Hamster DX / Hamster III:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Execute o instalador do <strong>driver do Hamster</strong> como Administrador.</li>
+                <li>Siga as instruções do instalador até concluir.</li>
+                <li>Conecte o leitor biométrico na porta USB.</li>
+              </ol>
+              <InfoBox type="warning">
+                <p>Certifique-se de que o dispositivo é reconhecido no Gerenciador de Dispositivos do Windows antes de prosseguir.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={4} title="Copiar as DLLs para o sistema">
+              <p className="mb-3">Copie os arquivos DLL da terceira pasta para as pastas do sistema:</p>
+              <CodeBlock title="Pastas de destino">
+{`C:\\Windows\\System32
+C:\\Windows\\SysWOW64`}
+              </CodeBlock>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Abra a pasta que contém as <strong>DLLs</strong> do leitor.</li>
+                <li>Copie <strong>todos os arquivos .dll</strong> da pasta.</li>
+                <li>Cole em <code className="bg-muted px-1 py-0.5 rounded">C:\Windows\System32</code></li>
+                <li>Cole também em <code className="bg-muted px-1 py-0.5 rounded">C:\Windows\SysWOW64</code></li>
+              </ol>
+              <InfoBox type="warning">
+                <p>É necessário privilégios de <strong>Administrador</strong> para colar arquivos nessas pastas. Confirme a substituição se solicitado.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={5} title="Configurar o SDPdv.xml" important>
+              <p className="mb-3">Por fim, edite o arquivo <code className="bg-muted px-1 py-0.5 rounded">SDPdv.xml</code> para habilitar o leitor Hamster:</p>
+              <CodeBlock title="Localizar e editar o SDPdv.xml">
+{`Abra o arquivo SDPdv.xml na pasta do SDPdv`}
+              </CodeBlock>
+              <p className="mt-3 mb-2">Localize ou adicione a tag <strong>LeitorBiometrico</strong> com o seguinte conteúdo:</p>
+              <CodeBlock title="Configuração XML">
+{`<LeitorBiometrico>
+    <LBModelo>Hamster</LBModelo>
+</LeitorBiometrico>`}
+              </CodeBlock>
+              <InfoBox type="tip">
+                <p>Caso a tag <code className="bg-muted px-1 py-0.5 rounded">&lt;LeitorBiometrico&gt;</code> já exista no XML, apenas altere o valor de <code className="bg-muted px-1 py-0.5 rounded">&lt;LBModelo&gt;</code> para <strong>Hamster</strong>.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={6} title="Testar o Leitor" status="completed">
+              <p className="mb-3">Após todas as configurações, teste o funcionamento:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Reinicie o computador.</li>
+                <li>Abra o <strong>SD PDV</strong>.</li>
+                <li>Verifique se o leitor biométrico é reconhecido na tela de login ou cadastro de digital.</li>
+              </ol>
+              <InfoBox type="success">
+                Se o leitor for reconhecido e capturar a digital corretamente, a instalação foi concluída com sucesso!
+              </InfoBox>
+            </StepCard>
           </div>
         );
 
