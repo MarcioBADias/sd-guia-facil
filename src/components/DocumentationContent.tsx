@@ -1074,12 +1074,12 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule
                   Guia de Instalação SDK eNBioBSP (PDF)
                 </a>
                 <a
-                  href="/downloads/SERIAL.txt"
+                  href="https://drive.usercontent.google.com/download?id=1pZVBALZnmijqZjMpErGno95GDEnEGpQT&export=download&authuser=0"
                   download
                   className="flex items-center gap-2 p-3 rounded-lg border border-border bg-muted/50 hover:bg-muted transition-colors text-sm font-medium text-foreground"
                 >
                   <Download className="h-4 w-4 text-primary" />
-                  SERIAL.txt (Chave de ativação)
+                  Arquivos de Instalação Hamster (Download)
                 </a>
               </div>
               <InfoBox type="tip">
