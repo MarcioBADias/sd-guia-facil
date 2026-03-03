@@ -55,6 +55,19 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       ]
     },
     {
+      id: "comparativo-fiscal",
+      title: "Comparativo Fiscal",
+      icon: FileCheck,
+      items: [
+        { id: "comparativo-fiscal-intro", title: "Visão Geral" },
+        { id: "comparativo-fiscal-devolucao", title: "Notas de Devolução" },
+        { id: "comparativo-fiscal-rejeitadas", title: "Rejeitadas e Conflito" },
+        { id: "comparativo-fiscal-tela", title: "Tela Comparativo" },
+        { id: "comparativo-fiscal-duplicadas", title: "Vendas Duplicadas" },
+        { id: "comparativo-fiscal-divergencias", title: "Divergências de Itens" }
+      ]
+    },
+    {
       id: "troubleshooting",
       title: "Solução de Problemas",
       icon: Wrench,
