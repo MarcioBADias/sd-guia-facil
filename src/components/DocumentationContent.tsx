@@ -4,6 +4,8 @@ import { Play } from "lucide-react";
 import StepCard from "./StepCard";
 import CodeBlock from "./CodeBlock";
 import InfoBox from "./InfoBox";
+import DuplicateChecker from "./DuplicateChecker";
+import DivergenceChecker from "./DivergenceChecker";
 
 interface VideoCardProps {
   title: string;
@@ -1374,6 +1376,8 @@ C:\\Windows\\SysWOW64`}
                 Só recarregue a tela ao chegar no final.
               </InfoBox>
             </StepCard>
+
+            <DuplicateChecker />
           </div>
         );
 
@@ -1416,6 +1420,8 @@ C:\\Windows\\SysWOW64`}
               Sempre que identificar uma versão do PDV muito antiga (abaixo da <strong>270</strong>), agende a atualização dos PDVs 
               para evitar motivos de diferença no comparativo. Pondere a versão a usar — se a última versão liberada tiver algum bug, não a utilize.
             </InfoBox>
+
+            <DivergenceChecker />
           </div>
         );
 
