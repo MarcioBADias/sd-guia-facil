@@ -1166,6 +1166,259 @@ C:\\Windows\\SysWOW64`}
           </div>
         );
 
+      case "comparativo-fiscal-intro":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">Comparativo Fiscal</h1>
+            <p className="text-lg text-muted-foreground">
+              Padronizar os acertos no comparativo fiscal visando maior eficiência no período de SPED fiscal e dar soluções definitivas.
+            </p>
+
+            <InfoBox type="info" title="Objetivo">
+              Este guia orienta o passo a passo para corrigir as diferenças no comparativo fiscal. 
+              É fundamental seguir a ordem dos passos para evitar retrabalho e garantir que todas as diferenças sejam resolvidas corretamente.
+            </InfoBox>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-border bg-muted/30">
+                <h3 className="font-semibold mb-2 text-foreground">📋 Ordem dos Passos</h3>
+                <ol className="space-y-1 text-sm text-muted-foreground list-decimal list-inside">
+                  <li>Transmitir notas de devolução</li>
+                  <li>Acertar rejeitadas e notas em conflito</li>
+                  <li>Carregar a tela de Comparativo Fiscal</li>
+                  <li>Acertar vendas duplicadas</li>
+                  <li>Verificar divergências de itens</li>
+                </ol>
+              </div>
+              <div className="p-4 rounded-lg border border-primary/20 bg-primary/5">
+                <h3 className="font-semibold mb-2 text-primary">⚠️ Importante</h3>
+                <p className="text-sm text-muted-foreground">
+                  Siga rigorosamente a ordem dos passos. Acertar devoluções e rejeitadas antes de verificar vendas duplicadas 
+                  evita confusão nas diferenças positivas do comparativo.
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case "comparativo-fiscal-devolucao":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">1 – Transmitir Notas de Devolução</h1>
+            <p className="text-muted-foreground">
+              Acesse <strong>Fiscal → Saídas → Controle de Importação de XMLs</strong> para gerar as notas de devolução pendentes.
+            </p>
+
+            <StepCard step={1} title="Selecionar a crítica correta">
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Selecione a crítica <strong>"Ocorrência de venda Existente na Migrate que não consta no Super"</strong></li>
+                <li>Clique em <strong>Detalhar</strong></li>
+                <li>Na tela de detalhamento, deixe apenas a opção <strong>"Autorizados"</strong> selecionada</li>
+              </ol>
+            </StepCard>
+
+            <StepCard step={2} title="Gerar as notas de devolução">
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Marque todas as vendas listadas</li>
+                <li>Clique no botão <strong>NF-e</strong> para gerar as notas de devolução</li>
+                <li>O sistema pedirá uma <strong>chave de confirmação</strong> — confirme</li>
+                <li>Transmita todas as notas pendentes referentes à devolução de NFC-e</li>
+              </ol>
+            </StepCard>
+
+            <InfoBox type="info" title="Observação sobre o Sentinela">
+              O Sentinela gera automaticamente notas de devolução durante o mês para otimizar o tempo de acerto do comparativo. 
+              Atualmente ele gera cerca de <strong>80% dos casos</strong>. O restante precisa ser gerado manualmente seguindo este passo.
+            </InfoBox>
+          </div>
+        );
+
+      case "comparativo-fiscal-rejeitadas":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">2 – Acerto de Rejeitadas e Notas em Conflito</h1>
+
+            <StepCard step={1} title="Acertar notas rejeitadas" important>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Acesse o <strong>InvoiCy</strong> e filtre o mês desejado</li>
+                <li>Filtre apenas as notas <strong>Rejeitadas</strong></li>
+                <li>Exporte as XML's</li>
+                <li>Use o <strong>SDXml</strong> para acertar essas XML's</li>
+              </ol>
+            </StepCard>
+
+            <StepCard step={2} title="Sincronizar vendas rejeitadas">
+              <p className="mb-3">Após o acerto e envio, detalhe a crítica <strong>"Vendas rejeitadas na Migrate"</strong> para sincronizar:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Na tela de <strong>Controle de Importação de XMLs</strong>, selecione a crítica "Vendas Rejeitada na Migrate"</li>
+                <li>Marque as vendas e clique em <strong>Sincronizar</strong></li>
+              </ol>
+              <InfoBox type="warning">
+                <p>A sincronização é necessária pois as vendas rejeitadas <strong>não vão para a tela de saídas</strong>. 
+                Essa sincronização cria a saída, acertando as diferenças no comparativo fiscal.</p>
+              </InfoBox>
+              <InfoBox type="info" title="Observação">
+                Em alguns casos, mesmo após sincronizar, as vendas não saem do detalhamento da crítica. 
+                Verifique se a saída foi criada. Caso não encontre, baixe a XML do InvoiCy e anexe na tela de saídas usando o botão <strong>XML</strong>.
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={3} title="Notas em conflito">
+              <p className="mb-3">As notas em conflito acontecem quando a SEFAZ não comunica corretamente com o InvoiCy.</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>No InvoiCy, filtre por status <strong>"Em conflito"</strong></li>
+                <li>Realize o <strong>download</strong> das notas em conflito</li>
+                <li>Importe na <strong>tela de saídas</strong> para acerto do comparativo</li>
+              </ol>
+              <InfoBox type="info">
+                <p>As notas em conflito também aparecem na crítica <strong>"Vendas rejeitadas na Migrate"</strong>.</p>
+              </InfoBox>
+            </StepCard>
+          </div>
+        );
+
+      case "comparativo-fiscal-tela":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">3 – Carregar a Tela de Comparativo Fiscal</h1>
+            <p className="text-muted-foreground">
+              Acesse <strong>Fiscal → Relatório → Comparativo Fiscal</strong>
+            </p>
+
+            <StepCard step={1} title="Entendendo a tela" important>
+              <p className="mb-3">Essa tela é o <strong>ponto chave</strong> do período de SPED. Ela mostra o dia e PDV que estão com diferença, facilitando a conferência.</p>
+              
+              <div className="overflow-x-auto my-4">
+                <table className="w-full text-sm border border-border">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th className="border border-border px-3 py-2 text-left">Coluna</th>
+                      <th className="border border-border px-3 py-2 text-left">Descrição</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td className="border border-border px-3 py-2 font-medium">Pdv MFD / NFCe</td><td className="border border-border px-3 py-2">Valor total de vendas dos PDVs</td></tr>
+                    <tr><td className="border border-border px-3 py-2 font-medium">Substituída</td><td className="border border-border px-3 py-2">Valor total de substituição de NFC-e por NF-e</td></tr>
+                    <tr><td className="border border-border px-3 py-2 font-medium">Devolução</td><td className="border border-border px-3 py-2">Valor total de devoluções de NFC-e</td></tr>
+                    <tr><td className="border border-border px-3 py-2 font-medium">Saída</td><td className="border border-border px-3 py-2">Valor total das saídas fiscal NFC-e</td></tr>
+                    <tr><td className="border border-border px-3 py-2 font-medium">Diferença</td><td className="border border-border px-3 py-2">Pdv - Substituída + Devolvida - Saída</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </StepCard>
+
+            <InfoBox type="warning" title="Importante sobre performance">
+              Dependendo do cliente, a tela pode ser <strong>lenta</strong> devido ao volume de dados de vendas e saídas. 
+              Por isso ela só deve ser carregada após já ter acertado as devoluções, rejeitadas e notas em conflito (passos 1 e 2).
+            </InfoBox>
+
+            <InfoBox type="tip" title="Dica de eficiência">
+              Carregar a tela a cada acerto é ineficiente. O recomendado é carregar <strong>1 vez</strong> e ir acertando dia a dia 
+              usando a tela de <strong>Controle de Importação de XMLs</strong>. Ao terminar todos os acertos, carregue a tela novamente para conferência final.
+            </InfoBox>
+          </div>
+        );
+
+      case "comparativo-fiscal-duplicadas":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">4 – Vendas Duplicadas</h1>
+            
+            <InfoBox type="warning" title="Pré-requisito obrigatório">
+              É <strong>obrigatório</strong> efetuar todos os acertos dos passos 1 e 2 antes de iniciar o acerto das vendas duplicadas. 
+              As rejeitadas e NFC-e em conflito também aparecem como diferença positiva, o que pode causar confusão.
+            </InfoBox>
+
+            <p className="text-muted-foreground">
+              As vendas duplicadas sempre aparecem como uma <strong>diferença positiva (azul)</strong> no comparativo fiscal.
+            </p>
+
+            <StepCard step={1} title="Como identificar – Primeira forma">
+              <p className="mb-3">Na tela de <strong>Cadastro de Cupons Fiscais</strong>:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Filtre por data e PDV conforme o dia com diferença no comparativo</li>
+                <li>No campo de busca, digite o <strong>valor da diferença</strong></li>
+                <li>Se encontrar um cupom com esse valor exato, é a venda duplicada</li>
+                <li>Se não encontrar, use a segunda forma</li>
+              </ol>
+            </StepCard>
+
+            <StepCard step={2} title="Como identificar – Segunda forma (mais assertiva)" important>
+              <p className="mb-3">Exporte os cupons para Excel e use o recurso de duplicados:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Na tela de cupons fiscais, filtre o máximo possível (data e PDV)</li>
+                <li>Exporte para <strong>Excel</strong></li>
+                <li>Selecione a coluna dos <strong>números de cupom</strong></li>
+                <li>Use o recurso do Excel: <strong>Página Inicial → Formatação Condicional → Regras de Realce das Células → Valores Duplicados</strong></li>
+                <li>Os cupons duplicados serão destacados</li>
+              </ol>
+              <InfoBox type="tip">
+                <p>Pode ser exportado mais dias caso tenha diferenças seguidas de vendas duplicadas.</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={3} title="Como efetuar o acerto">
+              <p className="mb-3">Para acertar a venda duplicada:</p>
+              <ol className="space-y-2 text-sm list-decimal list-inside">
+                <li>Filtre a tela de <strong>Saídas</strong> e <strong>Cupons Fiscais</strong> pelo mesmo período/PDV</li>
+                <li>Faça o questionamento: <strong>"Qual venda não está aparecendo em saídas?"</strong></li>
+                <li>Essa é a venda que deve ser <strong>cancelada manualmente</strong> na tela de cupons fiscais</li>
+              </ol>
+              <InfoBox type="info">
+                <p>O valor da venda cancelada pode ser <strong>maior</strong> que o valor da diferença. Após o cancelamento, 
+                pode surgir uma diferença de valor negativo — isso é <strong>normal</strong>.</p>
+              </InfoBox>
+              <InfoBox type="tip" title="Dica de eficiência">
+                Após cancelar a venda, <strong>não recarregue</strong> a tela de comparativo fiscal. 
+                Vá rolando para a próxima diferença, identifique o motivo, acerte e role novamente. 
+                Só recarregue a tela ao chegar no final.
+              </InfoBox>
+            </StepCard>
+          </div>
+        );
+
+      case "comparativo-fiscal-divergencias":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold text-foreground">5 – Divergências de Itens</h1>
+            <p className="text-muted-foreground">
+              O objetivo dessa crítica é analisar se existe uma divergência entre o valor dos itens entre as saídas e vendas.
+            </p>
+
+            <StepCard step={1} title="Exemplo 1 – Diferença parcial (NÃO gerar NF-e)">
+              <div className="space-y-2 text-sm">
+                <p><strong>Cupons Fiscais:</strong> Pdv1 – Número do cupom → R$20,00</p>
+                <p><strong>Saídas:</strong> Pdv01 – Número da saída → R$15,00</p>
+                <p className="mt-2">Nesse caso, a diferença é de R$5,00. <strong>Não podemos gerar uma NF-e de R$5,00</strong> — o sistema 
+                geraria uma devolução do valor total, criando mais diferenças.</p>
+              </div>
+              <InfoBox type="warning">
+                <p>Quando a venda tem valor e a saída tem valor diferente, <strong>não gere NF-e da diferença</strong>. 
+                Compare item a item para identificar o motivo da divergência (desconto, frete, outras despesas).</p>
+              </InfoBox>
+            </StepCard>
+
+            <StepCard step={2} title="Exemplo 2 – Venda zerada na MFD (pode gerar NF-e)">
+              <div className="space-y-2 text-sm">
+                <p><strong>Cupons Fiscais:</strong> Pdv1 – Número do cupom → R$0,00</p>
+                <p><strong>Saídas:</strong> Pdv01 – Número da saída → R$20,00</p>
+                <p className="mt-2">Nesse caso, <strong>é possível</strong> marcar a venda e gerar a NF-e e transmitir.</p>
+              </div>
+            </StepCard>
+
+            <InfoBox type="info" title="Objetivo da crítica">
+              Além de gerar NF-e em casos específicos, essa crítica ajuda a identificar possíveis <strong>bugs no SDPdv ou SDSuper</strong>, 
+              como o não envio de valor de desconto para a saída, ou valores como frete e outras despesas não sendo considerados. 
+              A verificação detalhada de saídas × vendas deve ser feita <strong>pós período de SPED fiscal</strong>.
+            </InfoBox>
+
+            <InfoBox type="warning" title="Atualização de PDV obrigatória">
+              Sempre que identificar uma versão do PDV muito antiga (abaixo da <strong>270</strong>), agende a atualização dos PDVs 
+              para evitar motivos de diferença no comparativo. Pondere a versão a usar — se a última versão liberada tiver algum bug, não a utilize.
+            </InfoBox>
+          </div>
+        );
+
       default:
         return (
           <div className="text-center py-8">
