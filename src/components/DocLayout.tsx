@@ -88,7 +88,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
   ];
 
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex h-screen bg-background lg:h-screen lg:overflow-hidden">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div 
@@ -99,10 +99,11 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:static lg:block inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
+        fixed lg:static lg:flex lg:flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        lg:h-screen lg:overflow-hidden
       `}>
-        <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center justify-between p-4 border-b flex-shrink-0">
           <div className="flex items-center gap-3">
             <img src={logoSD} alt="SD Informática" className="h-10 w-auto" />
             <div>
@@ -120,8 +121,8 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
           </Button>
         </div>
 
-        <ScrollArea className="flex-1 p-4">
-          <nav className="space-y-2">
+        <ScrollArea className="flex-1">
+          <nav className="space-y-2 p-4">
             {sections.map((section) => {
               const Icon = section.icon;
               return (
@@ -164,9 +165,9 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col overflow-hidden lg:overflow-hidden">
         {/* Header */}
-        <header className="flex items-center gap-4 p-4 border-b bg-card">
+        <header className="flex items-center gap-4 p-4 border-b bg-card flex-shrink-0">
           <Button
             variant="ghost"
             size="sm"
@@ -187,7 +188,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         </header>
 
         {/* Content */}
-        <main className="flex-1 overflow-y-auto min-h-0">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden lg:overflow-y-auto">
           <div className="max-w-4xl mx-auto p-6">
             {children}
           </div>
