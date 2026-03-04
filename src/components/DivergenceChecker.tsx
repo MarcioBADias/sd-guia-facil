@@ -8,7 +8,6 @@ type DiferençaTipo = "cupom_sem_saida" | "saida_sem_cupom" | "valor_diferente" 
 interface DiffRow {
   numero: string;
   pdv: string;
-  dia: string;
   valorCupom: string;
   valorSaida: string;
   tipo: DiferençaTipo;
@@ -55,14 +54,84 @@ const DivergenceChecker = () => {
       reader.readAsArrayBuffer(file);
     });
 
-  const findCol = (headers: string[], keywords: string[]) =>
-    headers.find((h) => keywords.some((k) => h.toLowerCase().includes(k.toLowerCase())));
+  // normalize string by removing diacritics, stripping non-alphanumerics, and lowercasing
+  const normalize = (s: string) => {
+    let str = s
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .replace(/[^a-z0-9 ]/gi, "")
+      .toLowerCase();
+    // cleanup common encoding corruption patterns
+    str = str.replace(/[\u00c2\u00e2\u00c3\u00e3\u00c7\u00e7\u00d1\u00f1]+/g, "");
+    str = str.replace(/\s+/g, " ").trim();
+    return str;
+  };
+
+// simple Levenshtein distance (we only need small inputs, so performance isn't critical)
+const lev = (a: string, b: string) => {
+  const dp: number[][] = [];
+  for (let i = 0; i <= a.length; i++) {
+    dp[i] = [i];
+  }
+  for (let j = 0; j <= b.length; j++) {
+    dp[0][j] = j;
+  }
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+  }
+  return dp[a.length][b.length];
+};
+
+// attempt to match each keyword (splitting on spaces) against a normalized header
+// if no direct hit, fall back to small-distance fuzzy match (<=1)
+const findCol = (headers: string[], keywords: string[]) => {
+  for (const h of headers) {
+    const nh = normalize(h);
+    if (keywords.some((k) => {
+      const nk = normalize(k);
+      return nk.split(" ").every((w) => nh.includes(w));
+    })) {
+      return h;
+    }
+  }
+
+  // fallback: approximate match
+  for (const h of headers) {
+    const nh = normalize(h).replace(/\s+/g, "");
+    for (const k of keywords) {
+      const nk = normalize(k).replace(/\s+/g, "");
+      if (lev(nh, nk) <= 1) {
+        return h;
+      }
+    }
+  }
+
+  return undefined;
+};
 
   const parseValor = (v: any): number | null => {
     if (v === "" || v === null || v === undefined || v === "-") return null;
-    const s = String(v).replace(/[R$\s]/g, "").replace(",", ".");
-    const n = parseFloat(s);
-    return isNaN(n) ? null : n;
+    const original = String(v).replace(/[R$\s]/g, "");
+    const s = original.replace(",", ".");
+    let n = parseFloat(s);
+    if (isNaN(n)) return null;
+    // if original string has no decimal separator and is a positive integer
+    if (!original.includes(".") && !original.includes(",") && Number.isInteger(n) && n > 0) {
+      // 3-digit values: divide by 10 (décimos de real)
+      if (original.length === 3) {
+        n = n / 10;
+      } else if (original.length >= 4) {
+        // 4+ digit values: divide by 100 (centavos)
+        n = n / 100;
+      }
+    }
+    return n;
   };
 
   const formatValor = (v: any): string => {
@@ -91,14 +160,13 @@ const DivergenceChecker = () => {
       const sH = Object.keys(saidasRows[0]);
       const cH = Object.keys(cuponsRows[0]);
 
-      const sNumCol = findCol(sH, ["número", "numero", "nº", "num", "doc", "documento", "saída", "saida", "cupom"]);
-      const cNumCol = findCol(cH, ["cupom", "número", "numero", "nº", "num", "doc", "documento"]);
+      const sNumCol = findCol(sH, ["numero", "num", "cupom"]);
+      const cNumCol = findCol(cH, ["cupom", "numero", "num"]);
       const sPdvCol = findCol(sH, ["pdv", "caixa", "terminal"]);
       const cPdvCol = findCol(cH, ["pdv", "caixa", "terminal"]);
-      const sDiaCol = findCol(sH, ["data", "dia", "date", "emissão", "emissao"]);
-      const cDiaCol = findCol(cH, ["data", "dia", "date", "emissão", "emissao"]);
-      const sValCol = findCol(sH, ["valor", "total", "vlr", "value"]);
-      const cValCol = findCol(cH, ["valor", "total", "vlr", "value"]);
+      // valor columns (normal and "valor venda" are both checked)
+      const sValCol = findCol(sH, ["valor", "valor venda", "total", "vlr", "value"]);
+      const cValCol = findCol(cH, ["valor", "valor venda", "total", "vlr", "value"]);
 
       if (!sNumCol || !cNumCol) {
         setError(
@@ -133,7 +201,6 @@ const DivergenceChecker = () => {
           diffs.push({
             numero: num,
             pdv: cPdvCol ? String(cr[cPdvCol]) : "-",
-            dia: cDiaCol ? String(cr[cDiaCol]) : "-",
             valorCupom: formatValor(cVal),
             valorSaida: "-",
             tipo: "cupom_sem_saida",
@@ -146,7 +213,6 @@ const DivergenceChecker = () => {
             diffs.push({
               numero: num,
               pdv: cPdvCol ? String(cr[cPdvCol]) : "-",
-              dia: cDiaCol ? String(cr[cDiaCol]) : "-",
               valorCupom: "-",
               valorSaida: formatValor(sVal),
               tipo: "cupom_sem_valor",
@@ -155,7 +221,6 @@ const DivergenceChecker = () => {
             diffs.push({
               numero: num,
               pdv: cPdvCol ? String(cr[cPdvCol]) : "-",
-              dia: cDiaCol ? String(cr[cDiaCol]) : "-",
               valorCupom: formatValor(cVal),
               valorSaida: "-",
               tipo: "saida_sem_valor",
@@ -164,7 +229,6 @@ const DivergenceChecker = () => {
             diffs.push({
               numero: num,
               pdv: cPdvCol ? String(cr[cPdvCol]) : "-",
-              dia: cDiaCol ? String(cr[cDiaCol]) : "-",
               valorCupom: formatValor(cVal),
               valorSaida: formatValor(sVal),
               tipo: "valor_diferente",
@@ -180,7 +244,6 @@ const DivergenceChecker = () => {
           diffs.push({
             numero: num,
             pdv: sPdvCol ? String(sr[sPdvCol]) : "-",
-            dia: sDiaCol ? String(sr[sDiaCol]) : "-",
             valorCupom: "-",
             valorSaida: formatValor(sVal),
             tipo: "saida_sem_cupom",
@@ -274,7 +337,6 @@ const DivergenceChecker = () => {
                     <tr className="bg-muted">
                       <th className="px-4 py-2 text-left font-medium text-muted-foreground">Cupom/Saída</th>
                       <th className="px-4 py-2 text-left font-medium text-muted-foreground">PDV</th>
-                      <th className="px-4 py-2 text-left font-medium text-muted-foreground">Dia</th>
                       <th className="px-4 py-2 text-left font-medium text-muted-foreground">Valor Cupom</th>
                       <th className="px-4 py-2 text-left font-medium text-muted-foreground">Valor Saída</th>
                       <th className="px-4 py-2 text-left font-medium text-muted-foreground">Tipo</th>
@@ -285,7 +347,6 @@ const DivergenceChecker = () => {
                       <tr key={i} className="border-t border-border hover:bg-muted/50">
                         <td className="px-4 py-2 font-mono text-primary">{row.numero}</td>
                         <td className="px-4 py-2 text-foreground">{row.pdv}</td>
-                        <td className="px-4 py-2 text-foreground">{row.dia}</td>
                         <td className="px-4 py-2 text-foreground">{row.valorCupom}</td>
                         <td className="px-4 py-2 text-foreground">{row.valorSaida}</td>
                         <td className="px-4 py-2">
