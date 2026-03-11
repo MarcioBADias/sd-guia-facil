@@ -68,6 +68,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       ]
     },
     {
+      id: "checklist-pdv",
+      title: "Checklist Atualização PDV",
+      icon: ClipboardCheck,
+      items: [
+        { id: "checklist-pdv-reforma", title: "Reforma Tributária" }
+      ]
+    },
+    {
       id: "troubleshooting",
       title: "Solução de Problemas",
       icon: Wrench,
