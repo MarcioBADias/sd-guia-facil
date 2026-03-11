@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck } from "lucide-react";
+import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
