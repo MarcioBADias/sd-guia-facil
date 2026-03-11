@@ -1425,6 +1425,106 @@ C:\\Windows\\SysWOW64`}
           </div>
         );
 
+      case "checklist-pdv-reforma":
+        return (
+          <div className="space-y-6">
+            <div className="py-4">
+              <h1 className="text-3xl font-bold mb-2">📋 Checklist – Atualização PDV (Reforma Tributária)</h1>
+              <div className="flex flex-wrap gap-3 mt-3">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                  Clientes parceiros: Acerto Fiscal
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-destructive/10 text-destructive border border-destructive/20">
+                  📅 Prazo final: 13/03/2026
+                </span>
+              </div>
+            </div>
+
+            <InfoBox type="info" title="🔹 Versões a instalar">
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center justify-between">
+                  <span>• <strong>SDPdv 340</strong></span>
+                  <a
+                    href="https://drive.google.com/file/d/1UP8E989ZJFBQ6wHkIY03fCpfbUssFwXb/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    <Download className="h-3 w-3" /> Baixar SDPdv 340
+                  </a>
+                </li>
+                <li>• <strong>SDPdvPro 132</strong></li>
+              </ul>
+            </InfoBox>
+
+            <StepCard step={1} title="Verificar Sistema Operacional" important>
+              <div className="space-y-3">
+                <p>Conferir se o Windows é <strong>Windows 7 ou inferior</strong>.</p>
+                <InfoBox type="warning" title="⚠️ Se for Windows 7 ou inferior">
+                  <ul className="space-y-1 text-sm">
+                    <li>• Será necessário <strong>formatar a máquina</strong></li>
+                    <li>• Atualizar o sistema para <strong>Windows 10 Pro</strong> antes de prosseguir com a atualização do PDV</li>
+                  </ul>
+                </InfoBox>
+              </div>
+            </StepCard>
+
+            <StepCard step={2} title="Conferir versão atual do PDV" important>
+              <div className="space-y-4">
+                <div className="p-4 rounded-lg border border-destructive/20 bg-destructive/5">
+                  <p className="font-semibold text-destructive mb-2">Se a versão for abaixo da 321:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>1. Fechar o caixa</li>
+                    <li>2. Remover o banco do PDV</li>
+                    <li>3. Depois executar a atualização</li>
+                  </ul>
+                </div>
+                <div className="p-4 rounded-lg border border-green-500/20 bg-green-500/5">
+                  <p className="font-semibold text-green-600 dark:text-green-400 mb-2">Se a versão for 321 ou superior:</p>
+                  <p className="text-sm">Apenas executar o update</p>
+                </div>
+              </div>
+            </StepCard>
+
+            <StepCard step={3} title="Limpeza de arquivos XML">
+              <div className="space-y-3">
+                <p>Nas pastas:</p>
+                <CodeBlock title="Pastas a limpar">
+{`C:@SDPdv
+C:\\SDPdv`}
+                </CodeBlock>
+                <ul className="space-y-1 text-sm">
+                  <li>• Fazer <strong>backup</strong> ou remover todos os arquivos <code className="bg-muted px-1 py-0.5 rounded">.xml</code></li>
+                  <li>• Deixar apenas: <code className="bg-muted px-1 py-0.5 rounded">SDPdv.xml</code></li>
+                </ul>
+              </div>
+            </StepCard>
+
+            <StepCard step={4} title="Executar atualização" important>
+              <div className="space-y-3">
+                <p>Rodar o update como <strong>ADMINISTRADOR</strong>.</p>
+                <InfoBox type="warning" title="⚠️ Atenção">
+                  Caso contrário a atualização <strong>não será concluída</strong>.
+                </InfoBox>
+              </div>
+            </StepCard>
+
+            <StepCard step={5} title="Teste após atualização" important>
+              <div className="space-y-3">
+                <p>Realizar uma <strong>venda de teste</strong> e validar se o PDV está respeitando:</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• ✅ Número do cupom</li>
+                  <li>• ✅ Série do cupom</li>
+                </ul>
+              </div>
+            </StepCard>
+
+            <InfoBox type="warning" title="⚠️ Inconformidades">
+              Caso encontrem qualquer inconformidade, informar para tratarmos com <strong>Jorge / Qualidade</strong>.
+            </InfoBox>
+          </div>
+        );
+
       default:
         return (
           <div className="text-center py-8">

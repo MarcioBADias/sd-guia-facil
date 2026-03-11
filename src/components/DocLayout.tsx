@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck } from "lucide-react";
+import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -65,6 +65,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         { id: "comparativo-fiscal-tela", title: "Tela Comparativo" },
         { id: "comparativo-fiscal-duplicadas", title: "Vendas Duplicadas" },
         { id: "comparativo-fiscal-divergencias", title: "Divergências de Itens" }
+      ]
+    },
+    {
+      id: "checklist-pdv",
+      title: "Checklist Atualização PDV",
+      icon: ClipboardCheck,
+      items: [
+        { id: "checklist-pdv-reforma", title: "Reforma Tributária" }
       ]
     },
     {
