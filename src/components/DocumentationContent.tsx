@@ -1430,6 +1430,15 @@ C:\\Windows\\SysWOW64`}
           <div className="space-y-6">
             <div className="py-4">
               <h1 className="text-3xl font-bold mb-2">📋 CHECKLIST – ATUALIZAÇÃO REFORMA TRIBUTÁRIA</h1>
+              <a
+                href="https://docs.google.com/spreadsheets/d/18auuolxCSwylradsb9kUkhUhBqQRq-3rVXUCrbmQwsM/edit?gid=1964349410#gid=1964349410"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Abrir Planilha de Atualizações
+              </a>
             </div>
 
             <StepCard step={1} title="Versões Obrigatórias" important>
