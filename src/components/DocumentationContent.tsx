@@ -6,6 +6,7 @@ import CodeBlock from "./CodeBlock";
 import InfoBox from "./InfoBox";
 import DuplicateChecker from "./DuplicateChecker";
 import DivergenceChecker from "./DivergenceChecker";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface VideoCardProps {
   title: string;
