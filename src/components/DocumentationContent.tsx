@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Download } from "lucide-react";
-import { Play } from "lucide-react";
+import { Download, ExternalLink, Play } from "lucide-react";
 import StepCard from "./StepCard";
 import CodeBlock from "./CodeBlock";
 import InfoBox from "./InfoBox";
