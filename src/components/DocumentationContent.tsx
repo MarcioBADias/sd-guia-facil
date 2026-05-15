@@ -1430,99 +1430,119 @@ C:\\Windows\\SysWOW64`}
         return (
           <div className="space-y-6">
             <div className="py-4">
-              <h1 className="text-3xl font-bold mb-2">📋 Checklist – Atualização PDV (Reforma Tributária)</h1>
-              <div className="flex flex-wrap gap-3 mt-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
-                  Clientes parceiros: Acerto Fiscal
-                </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-destructive/10 text-destructive border border-destructive/20">
-                  📅 Prazo final: 13/03/2026
-                </span>
-              </div>
+              <h1 className="text-3xl font-bold mb-2">📋 CHECKLIST – ATUALIZAÇÃO REFORMA TRIBUTÁRIA</h1>
             </div>
 
-            <InfoBox type="info" title="🔹 Versões a instalar">
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center justify-between">
-                  <span>• <strong>SDPdv 340</strong></span>
-                  <a
-                    href="https://drive.google.com/file/d/1UP8E989ZJFBQ6wHkIY03fCpfbUssFwXb/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors"
-                  >
-                    <Download className="h-3 w-3" /> Baixar SDPdv 340
-                  </a>
-                </li>
-                <li>• <strong>SDPdvPro 132</strong></li>
-              </ul>
+            <StepCard step={1} title="Versões Obrigatórias" important>
+              <div className="grid md:grid-cols-2 gap-3 text-sm">
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDSuper</span>
+                  <span className="ml-auto font-bold text-primary">10.2.2597</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">Sentinela</span>
+                  <span className="ml-auto font-bold text-primary">10.2.926</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDSuperX</span>
+                  <span className="ml-auto font-bold text-primary">11.2.526</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDPdv</span>
+                  <span className="ml-auto font-bold text-primary">355</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDPdv Pro</span>
+                  <span className="ml-auto font-bold text-primary">147</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDSync</span>
+                  <span className="ml-auto font-bold text-primary">19</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDCarga</span>
+                  <span className="ml-auto font-bold text-primary">12.1.153.0</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDRestServer</span>
+                  <span className="ml-auto font-bold text-primary">49</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDTributário</span>
+                  <span className="ml-auto font-bold text-primary">1.0.53</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                  <span className="font-medium">SDAtualizador</span>
+                  <span className="ml-auto font-bold text-primary">13.0.12495</span>
+                </div>
+              </div>
+            </StepCard>
+
+            <StepCard step={2} title="Checklist de Atualização" important>
+              <div className="space-y-2">
+                {[
+                  "Atualizar SDSuper",
+                  "Atualizar Sentinela",
+                  "Atualizar SDSuperX",
+                  "Atualizar SDPdv",
+                  "Atualizar SDPdv Pro",
+                  "Atualizar SDSync",
+                  "Atualizar SDCarga",
+                  "Atualizar SDRestServer",
+                  "Atualizar SDTributário",
+                  "Atualizar SDAtualizador"
+                ].map((item, idx) => (
+                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
+                    <Checkbox />
+                    <span className="text-sm">{item}</span>
+                  </label>
+                ))}
+              </div>
+            </StepCard>
+
+            <StepCard step={3} title="Procedimento obrigatório após atualizar o SDSuper" important>
+              <p className="mb-3 text-sm">Ir em: <strong>Controle → Computador → Manutenção de Dados</strong></p>
+              <div className="space-y-2">
+                {[
+                  "Criar usuário SDSuper no banco de vendas",
+                  "Criar índices de chaves estrangeiras",
+                  "Ativar os índices"
+                ].map((item, idx) => (
+                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
+                    <Checkbox />
+                    <span className="text-sm">{item}</span>
+                  </label>
+                ))}
+              </div>
+            </StepCard>
+
+            <InfoBox type="warning" title="Importante">
+              Não é necessário matar o banco de dados para atualizar o SDPdv em versões acima da 321.
             </InfoBox>
 
-            <StepCard step={1} title="Verificar Sistema Operacional" important>
-              <div className="space-y-3">
-                <p>Conferir se o Windows é <strong>Windows 7 ou inferior</strong>.</p>
-                <InfoBox type="warning" title="⚠️ Se for Windows 7 ou inferior">
-                  <ul className="space-y-1 text-sm">
-                    <li>• Será necessário <strong>formatar a máquina</strong></li>
-                    <li>• Atualizar o sistema para <strong>Windows 10 Pro</strong> antes de prosseguir com a atualização do PDV</li>
-                  </ul>
-                </InfoBox>
+            <StepCard step={4} title="Após atualizar os PDV's">
+              <div className="space-y-2">
+                <label className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
+                  <Checkbox />
+                  <span className="text-sm">Realizar envio das contingências</span>
+                </label>
               </div>
             </StepCard>
 
-            <StepCard step={2} title="Conferir versão atual do PDV" important>
-              <div className="space-y-4">
-                <div className="p-4 rounded-lg border border-destructive/20 bg-destructive/5">
-                  <p className="font-semibold text-destructive mb-2">Se a versão for abaixo da 321:</p>
-                  <ul className="space-y-1 text-sm">
-                    <li>1. Fechar o caixa</li>
-                    <li>2. Remover o banco do PDV</li>
-                    <li>3. Depois executar a atualização</li>
-                  </ul>
-                </div>
-                <div className="p-4 rounded-lg border border-green-500/20 bg-green-500/5">
-                  <p className="font-semibold text-green-600 dark:text-green-400 mb-2">Se a versão for 321 ou superior:</p>
-                  <p className="text-sm">Apenas executar o update</p>
-                </div>
+            <StepCard step={5} title="Após finalizar todas as atualizações" important>
+              <div className="space-y-2">
+                {[
+                  "Preencher a planilha enviada pelo Davi no grupo",
+                  "Realizar teste de carga em todos os caixas",
+                  "Validar se o Sentinela está sem erros"
+                ].map((item, idx) => (
+                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
+                    <Checkbox />
+                    <span className="text-sm">{item}</span>
+                  </label>
+                ))}
               </div>
             </StepCard>
-
-            <StepCard step={3} title="Limpeza de arquivos XML">
-              <div className="space-y-3">
-                <p>Nas pastas:</p>
-                <CodeBlock title="Pastas a limpar">
-{`C:@SDPdv
-C:\\SDPdv`}
-                </CodeBlock>
-                <ul className="space-y-1 text-sm">
-                  <li>• Fazer <strong>backup</strong> ou remover todos os arquivos <code className="bg-muted px-1 py-0.5 rounded">.xml</code></li>
-                  <li>• Deixar apenas: <code className="bg-muted px-1 py-0.5 rounded">SDPdv.xml</code></li>
-                </ul>
-              </div>
-            </StepCard>
-
-            <StepCard step={4} title="Executar atualização" important>
-              <div className="space-y-3">
-                <p>Rodar o update como <strong>ADMINISTRADOR</strong>.</p>
-                <InfoBox type="warning" title="⚠️ Atenção">
-                  Caso contrário a atualização <strong>não será concluída</strong>.
-                </InfoBox>
-              </div>
-            </StepCard>
-
-            <StepCard step={5} title="Teste após atualização" important>
-              <div className="space-y-3">
-                <p>Realizar uma <strong>venda de teste</strong> e validar se o PDV está respeitando:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>• ✅ Número do cupom</li>
-                  <li>• ✅ Série do cupom</li>
-                </ul>
-              </div>
-            </StepCard>
-
-            <InfoBox type="warning" title="⚠️ Inconformidades">
-              Caso encontrem qualquer inconformidade, informar para tratarmos com <strong>Jorge / Qualidade</strong>.
-            </InfoBox>
           </div>
         );
 
