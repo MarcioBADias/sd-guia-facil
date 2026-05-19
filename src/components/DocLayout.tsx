@@ -76,6 +76,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       ]
     },
     {
+      id: "chamados",
+      title: "Chamados Técnicos",
+      icon: Headphones,
+      items: [
+        { id: "chamados-prazos", title: "Prazos por Localidade" }
+      ]
+    },
+    {
       id: "troubleshooting",
       title: "Solução de Problemas",
       icon: Wrench,
