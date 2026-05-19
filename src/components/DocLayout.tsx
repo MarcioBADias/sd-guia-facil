@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck, ClipboardCheck } from "lucide-react";
+import { Menu, X, Book, Monitor, Settings, ChevronRight, Wrench, GraduationCap, FileCheck, ClipboardCheck, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -73,6 +73,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       icon: ClipboardCheck,
       items: [
         { id: "checklist-pdv-reforma", title: "Reforma Tributária" }
+      ]
+    },
+    {
+      id: "chamados",
+      title: "Chamados Técnicos",
+      icon: Headphones,
+      items: [
+        { id: "chamados-prazos", title: "Prazos por Localidade" }
       ]
     },
     {

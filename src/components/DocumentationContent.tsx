@@ -1554,6 +1554,128 @@ C:\\Windows\\SysWOW64`}
           </div>
         );
 
+      case "chamados-prazos":
+        return (
+          <div className="space-y-6">
+            <div className="py-4">
+              <h1 className="text-3xl font-bold mb-2">📞 Chamados Técnicos</h1>
+              <p className="text-muted-foreground">
+                Prazos de atendimento por localidade, programações e manutenção preventiva.
+              </p>
+            </div>
+
+            <StepCard step={1} title="Prazos de Atendimento por Localidade" important>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th className="text-left p-3 border border-border">Tipo</th>
+                      <th className="text-left p-3 border border-border">Prazo</th>
+                      <th className="text-left p-3 border border-border">Observação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-3 border border-border align-top">
+                        <strong>CHAMADO R. LAGOS:</strong>
+                        <br />
+                        <span className="text-muted-foreground">CF · Araruama · SPA · Búzios · Macaé · RO</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        <span className="inline-block px-2 py-1 rounded-md bg-primary/10 text-primary font-bold">Até 24h</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        Podendo ser atendido antes, conforme disponibilidade técnica na região.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 border border-border align-top">
+                        <strong>CHAMADO:</strong>
+                        <br />
+                        <span className="text-muted-foreground">Grande Rio / São Gonçalo</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        <span className="inline-block px-2 py-1 rounded-md bg-primary/10 text-primary font-bold">Até 48h</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        Podendo ser atendido antes, conforme disponibilidade técnica na região.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 border border-border align-top">
+                        <strong>Treinamento online</strong>
+                        <br />
+                        <span className="text-muted-foreground">(Michael / Carlos)</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        <span className="inline-block px-2 py-1 rounded-md bg-muted font-medium">Verificar disp. agenda</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        Se urgente, conversar com o Carlos para verificar possibilidade de agenda extra ou encaixes em caso de desistência.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 border border-border align-top">
+                        <strong>Treinamento presencial</strong>
+                        <br />
+                        <span className="text-muted-foreground">(Téc. Externos)</span>
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        Oferecer o <em>online</em> e apresentar benefícios (MACRO*). Caso queira presencial, passar prazo de <strong>até 30 dias</strong>.
+                      </td>
+                      <td className="p-3 border border-border align-top">
+                        Podendo ser atendido antes conforme disponibilidade técnica (deixar isso claro para o cliente). Informar ao cliente que a solicitação foi aberta e entraremos em contato para agendamento.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </StepCard>
+
+            <StepCard step={2} title="Programações">
+              <p className="text-sm mb-3">
+                Instalação de Mikrotik, Roteador, máquinas novas, rede (se for hardware), troca de local de máquina/servidor, etc.
+              </p>
+              <InfoBox type="info" title="Perguntas obrigatórias antes de agendar">
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>Equipamento adquirido já está no local?</li>
+                  <li>Máquina: já possui parte elétrica, cabeamento, etc?</li>
+                </ul>
+              </InfoBox>
+              <div className="grid md:grid-cols-2 gap-3 mt-3">
+                <div className="p-3 rounded-md border border-border bg-muted/30">
+                  <div className="font-semibold mb-1">Visita programada</div>
+                  <div className="text-sm text-muted-foreground">Atendimento em até <strong>30 dias</strong> · faremos contato para agendar.</div>
+                </div>
+                <div className="p-3 rounded-md border border-border bg-muted/30">
+                  <div className="font-semibold mb-1">Formatação de máquina</div>
+                  <div className="text-sm text-muted-foreground">Não realizamos no local — recolhimento para laboratório.</div>
+                </div>
+              </div>
+            </StepCard>
+
+            <StepCard step={3} title="Manutenção Preventiva">
+              <ul className="list-disc list-inside space-y-1 text-sm">
+                <li>Período mínimo: <strong>6 meses</strong> desde a última realizada.</li>
+                <li>Prazo: mínimo de <strong>60 dias</strong>.</li>
+                <li>Verificar total de PDVs e Retaguardas.</li>
+              </ul>
+              <InfoBox type="warning" title="Cliente já abriu e solicitou urgência?">
+                Registrar no ticket e mudar prioridade para <strong>MÉDIA</strong>.
+              </InfoBox>
+            </StepCard>
+
+            <InfoBox type="info" title="*Macro — Treinamento Remoto">
+              Atualmente temos o módulo de treinamentos online (remotos), pré-agendados e exclusivos para a loja, com duração de
+              <strong> 1h30</strong>. A reunião acontece pelo Google Meet, por videoconferência, tornando-se bem dinâmica.
+              Os colaboradores podem tirar dúvidas em tempo real e o técnico especializado ainda realiza o acesso na máquina,
+              ensinando o passo a passo dos procedimentos e mostrando todas as telas. É bem completo e produtivo.
+            </InfoBox>
+          </div>
+        );
+
+
+
       default:
         return (
           <div className="text-center py-8">
