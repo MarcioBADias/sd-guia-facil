@@ -338,7 +338,7 @@ WMIC computersystem where name="%computername%" call rename name="SDPdv01"
                 </CodeBlock>
                 <CodeBlock title="Credenciais Gsurf">
 Login: Fernando_Silva
-Senha: SD1525!@#tec
+Senha: SD@info1525
                 </CodeBlock>
                 <div>
                   <p className="text-sm">Processo:</p>
