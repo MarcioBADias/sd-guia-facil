@@ -1,1 +1,2495 @@
-[]
+[
+  {
+    "cliente": "MERCADO RIO SUL DE HELIOPOLIS LTDA",
+    "cnpj": "43.591.285/0001-95",
+    "ocorrencias": 3218,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DO GRAMACHO LTDA",
+    "cnpj": "35.458.607/0001-02",
+    "ocorrencias": 766,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMIX VOLTA REDONDA",
+    "cnpj": "12.400.167/0001-29",
+    "ocorrencias": 610,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "CASA DOS CEREAIS F2 ITATIAIA",
+    "cnpj": "68.746.239/0002-20",
+    "ocorrencias": 437,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "LUGATI MERCADO E DISTRIBUIDORA LTDA",
+    "cnpj": "63.243.955/0001-90",
+    "ocorrencias": 323,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "N MARKET MERCEARIA E LANCHONETE LTDA",
+    "cnpj": "51.252.207/0001-94",
+    "ocorrencias": 300,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "BRIELTAMI CHAGAS LTDA ME",
+    "cnpj": "04.091.704/0001-78",
+    "ocorrencias": 254,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO SOL & MAR UNIPESSOAL LTDA",
+    "cnpj": "44.688.888/0001-72",
+    "ocorrencias": 207,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "DIST E COMERCIO DE FRIOS CABO FRIO TROPICAL LTDA",
+    "cnpj": "12.769.662/0002-90",
+    "ocorrencias": 177,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "BONS AMIGOS PINHEIRAL",
+    "cnpj": "02.313.321/0001-71",
+    "ocorrencias": 123,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "KATIA BACELLAR OLIVE MARINS ME",
+    "cnpj": "39.690.284/0001-20",
+    "ocorrencias": 98,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "N SILVA MINIMERCADO LTDA",
+    "cnpj": "41.384.075/0001-09",
+    "ocorrencias": 71,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "HORTFRUTI MURAKAMI LTDA ME",
+    "cnpj": "05.347.910/0001-69",
+    "ocorrencias": 60,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "MEC VITALLE MINIMERCADO LTDA ME",
+    "cnpj": "28.302.470/0001-29",
+    "ocorrencias": 24,
+    "tecnico": "Kleyton",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO MARCONDES LTDA",
+    "cnpj": "01.607.529/0001-30",
+    "ocorrencias": 11,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "POMMER FRUT LTDA",
+    "cnpj": "47.621.310/0001-97",
+    "ocorrencias": 7,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "PICA PAU CASA DE CARNES",
+    "cnpj": "29.599.388/0001-70",
+    "ocorrencias": 3,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUCESSO",
+    "cnpj": "07.667.464/0001-03",
+    "ocorrencias": 2,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER FREITAS LTDA",
+    "cnpj": "40.507.700/0001-91",
+    "ocorrencias": 1,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "NL FONTES DISTRIBUIDORA DE PRODUTOS ALIMENTÍCIOS LTDA",
+    "cnpj": "23.352.716/0001-53",
+    "ocorrencias": 2257,
+    "tecnico": "Felipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA FRONTIN LTDA ME",
+    "cnpj": "08.942.264/0001-76",
+    "ocorrencias": 996,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CORTES SILVA MERCADO ME",
+    "cnpj": "11.452.511/0001-60",
+    "ocorrencias": 746,
+    "tecnico": "Felipe",
+    "statusCadastro": "Em andamento",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIUM GENEROS ALIMENTICIOS LTDA",
+    "cnpj": "13.159.094/0007-83",
+    "ocorrencias": 546,
+    "tecnico": "Felipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "ARROZAL COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "30.174.554/0001-76",
+    "ocorrencias": 463,
+    "tecnico": "Felipe",
+    "statusCadastro": "Em andamento",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "CALIL PARAISO",
+    "cnpj": "01.190.829/0001-67",
+    "ocorrencias": 331,
+    "tecnico": "Felipe",
+    "statusCadastro": "Em andamento",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "BIGSTAR COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "20.451.367/0001-39",
+    "ocorrencias": 309,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADINHO ITAPEBA LTDA",
+    "cnpj": "27.423.553/0001-03",
+    "ocorrencias": 264,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL TRADICAO F1 PQ PAULISTA",
+    "cnpj": "37.657.925/0001-10",
+    "ocorrencias": 205,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "A E N FALTZ MERCEARIA LTDA",
+    "cnpj": "33.316.717/0001-04",
+    "ocorrencias": 159,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "COMERCIO DE CEREAIS IZANITA LTDA",
+    "cnpj": "07.258.484/0001-12",
+    "ocorrencias": 140,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "GRÃO DE OURO - SÃO JOSÉ",
+    "cnpj": "25.257.735/0004-79",
+    "ocorrencias": 95,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FMS MERCEARIA LTDA",
+    "cnpj": "50.614.705/0001-77",
+    "ocorrencias": 74,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO CARVALHOS F1 RESENDE",
+    "cnpj": "50.392.791/0001-10",
+    "ocorrencias": 51,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ROSEVA ACOUGUE E MERCEARIA LTDA",
+    "cnpj": "05.939.263/0001-84",
+    "ocorrencias": 26,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA THALES LTDA",
+    "cnpj": "01.652.081/0001-77",
+    "ocorrencias": 12,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "LOFM COM. E IND. DE MAT. DE LIMP. E BAZAR LTDA.",
+    "cnpj": "07.803.443/0001-60",
+    "ocorrencias": 10,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO PRIMOS",
+    "cnpj": "27.135.808/0001-32",
+    "ocorrencias": 5,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "REGINALDO R DE OLIVEIRA - O REGYS LTDA",
+    "cnpj": "02.469.094/0001-78",
+    "ocorrencias": 2,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "IDEAL LAGOS SUPERMERCADO LTDA",
+    "cnpj": "09.035.468/0001-96",
+    "ocorrencias": 1,
+    "tecnico": "Felipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIUM GENEROS ALIMENTICIOS EIRELI",
+    "cnpj": "13.159.094/0001-98",
+    "ocorrencias": 2226,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL PARQUE LAFAIETE LTDA EPP",
+    "cnpj": "39.977.333/0001-00",
+    "ocorrencias": 1003,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M ANTONIO SARAIVA MERCEARIA E ACOUGUE LTDA",
+    "cnpj": "08.242.628/0001-05",
+    "ocorrencias": 761,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO TRES AMIGOS DE PALMARES LTDA",
+    "cnpj": "48.963.114/0001-63",
+    "ocorrencias": 592,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO TRADIÇÃO RJ LTDA",
+    "cnpj": "37.657.925/0004-62",
+    "ocorrencias": 457,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO VILLAR COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "57.719.311/0001-22",
+    "ocorrencias": 314,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FCR SUPERMERCADO LTDA",
+    "cnpj": "34.791.241/0001-18",
+    "ocorrencias": 303,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO VILA RICA",
+    "cnpj": "12.159.602/0001-75",
+    "ocorrencias": 250,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "EMPORIO MEU CANTINHO DE CHARITAS LTDA",
+    "cnpj": "48.225.335/0001-34",
+    "ocorrencias": 212,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO MARECHAL R.A LTDA",
+    "cnpj": "54.291.858/0001-81",
+    "ocorrencias": 156,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER REDE MERCEARIA DE REALENGO EIRELI",
+    "cnpj": "20.096.015/0001-02",
+    "ocorrencias": 148,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA BARRACÃO DE FRIBURGO - MERCADO, MOVEIS, INFORMATICA E ELETRO LTDA",
+    "cnpj": "05.106.987/0001-47",
+    "ocorrencias": 83,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO & BAHIA (SUPER MARCOS MACAÉ)",
+    "cnpj": "17.347.555/0001-07",
+    "ocorrencias": 83,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PAME SUPERMERCADO E FRIOS LTDA",
+    "cnpj": "26.185.052/0001-73",
+    "ocorrencias": 41,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "R M SUPERMERCCADOS LTDA",
+    "cnpj": "58.771.117/0001-59",
+    "ocorrencias": 29,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO PRIMOS F2",
+    "cnpj": "27.135.808/0002-13",
+    "ocorrencias": 18,
+    "tecnico": "Alline",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SKINA PADARIA",
+    "cnpj": "10.440.200/0001-19",
+    "ocorrencias": 8,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MAIS BARATO ANGRA - FILIAL",
+    "cnpj": "11.074.872/0003-82",
+    "ocorrencias": 5,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CELCA COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+    "cnpj": "12.100.122/0001-39",
+    "ocorrencias": 2,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ARMAZEM DOS FIOS LTDA",
+    "cnpj": "04.442.991/0001-13",
+    "ocorrencias": 1,
+    "tecnico": "Alline",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ACDC CORTES MERCADO EIRELI",
+    "cnpj": "31.417.658/0001-27",
+    "ocorrencias": 2175,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO JAPERI LTDA",
+    "cnpj": "51.416.045/0001-82",
+    "ocorrencias": 1043,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER REDE POUPMAX",
+    "cnpj": "11.403.494/0001-71",
+    "ocorrencias": 763,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO VELHO GUIDO LTDA - EPP",
+    "cnpj": "27.148.962/0001-49",
+    "ocorrencias": 616,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "L C PINTO COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "08.117.738/0002-26",
+    "ocorrencias": 425,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RG LTDA",
+    "cnpj": "40.919.303/0001-27",
+    "ocorrencias": 331,
+    "tecnico": "Kleyton",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA GLOBO VILA DO JOÃO",
+    "cnpj": "28.519.739/0001-23",
+    "ocorrencias": 302,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "JOSINEI P MONTEIRO",
+    "cnpj": "05.893.395/0001-12",
+    "ocorrencias": 251,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "DIST E COMERCIO DE FRIOS CABO FRIO TROPICAL LTDA",
+    "cnpj": "12.769.662/0001-00",
+    "ocorrencias": 212,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MABELA MERC LTDA EPP",
+    "cnpj": "11.420.430/0001-89",
+    "ocorrencias": 153,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CEREAIS FLORIANO LTDA EPP",
+    "cnpj": "21.072.296/0001-26",
+    "ocorrencias": 148,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO CALIL DE CONCEICAO DE MACABU LTDA",
+    "cnpj": "01.190.829/0002-48",
+    "ocorrencias": 87,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MAPEE NOVO PLANETA LTDA",
+    "cnpj": "57.373.278/0001-21",
+    "ocorrencias": 79,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ATACADO E VAREJO PAGUE MENOS LTDA",
+    "cnpj": "60.141.408/0001-05",
+    "ocorrencias": 49,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MONEI MERCADO LTDA",
+    "cnpj": "23.027.685/0001-65",
+    "ocorrencias": 27,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL CENTENÁRIO CNPJ NOVO",
+    "cnpj": "33.749.495/0001-05",
+    "ocorrencias": 12,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ACEPEL COMERCIO DE ALIM TRIRRIENSE EIRELI",
+    "cnpj": "10.881.034/0001-96",
+    "ocorrencias": 11,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO CEBOLINHA LTDA",
+    "cnpj": "48.900.547/0001-70",
+    "ocorrencias": 5,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADOS BOM PRECO E NEW MAR LTDA",
+    "cnpj": "50.858.863/0002-53",
+    "ocorrencias": 2,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO MAYAS",
+    "cnpj": "37.644.243/0001-72",
+    "ocorrencias": 1,
+    "tecnico": "Adalto",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL RIO NORTE VITORIA DA VILA",
+    "cnpj": "26.175.533/0001-06",
+    "ocorrencias": 1984,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO N S F DA CABUCU LTDA",
+    "cnpj": "51.044.783/0001-46",
+    "ocorrencias": 1107,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "LATICINIOS BOA ESPERANCA DE ARARUAMA LTDA",
+    "cnpj": "29.840.154/0002-54",
+    "ocorrencias": 767,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FURTADO E ABREU MERCEARIA LTDA",
+    "cnpj": "31.884.800/0001-46",
+    "ocorrencias": 618,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO CANAA PORTO REAL",
+    "cnpj": "27.389.429/0001-79",
+    "ocorrencias": 517,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CEREAIS L.M.A. LTDA",
+    "cnpj": "28.698.878/0001-61",
+    "ocorrencias": 394,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MANCEBO 2 (MONTE SINAI)",
+    "cnpj": "13.159.094/0002-79",
+    "ocorrencias": 281,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M M TOLEDO ME",
+    "cnpj": "02.907.356/0001-39",
+    "ocorrencias": 244,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ACOUGUE ANGELIM LTDA ME",
+    "cnpj": "40.178.469/0001-30",
+    "ocorrencias": 204,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DA PENHA LTDA",
+    "cnpj": "42.810.855/0001-28",
+    "ocorrencias": 12000,
+    "tecnico": "Alexandre",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER LAGOS SUPERMERCADOS LTDA",
+    "cnpj": "30.065.703/0001-69",
+    "ocorrencias": 131,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO DA FAMILIA",
+    "cnpj": "14.214.299/0001-91",
+    "ocorrencias": 94,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M LUNA CEREAIS LTDA",
+    "cnpj": "39.229.299/0003-58",
+    "ocorrencias": 77,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MULTIMARKET NOVA CAMPINAS F2",
+    "cnpj": "01.829.249/0002-58",
+    "ocorrencias": 45,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ROSA DO POVO",
+    "cnpj": "68.667.773/0001-60",
+    "ocorrencias": 28,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SOGAL BMQ COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "05.402.370/0001-79",
+    "ocorrencias": 15,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO PONTO CERTO DAS CONCHAS LTDA",
+    "cnpj": "18.554.461/0001-71",
+    "ocorrencias": 9,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERM. ANCORA",
+    "cnpj": "11.670.482/0001-03",
+    "ocorrencias": 5,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POMMER FRUT LTDA",
+    "cnpj": "47.621.310/0002-78",
+    "ocorrencias": 2,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MULTIMARKET LUMIAR PAIS E FILHOS",
+    "cnpj": "29.215.555/0001-32",
+    "ocorrencias": 1,
+    "tecnico": "Daniel",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "LATICINIOS BOA ESPERANCA ARARUAMA LTDA",
+    "cnpj": "29.840.154/0001-73",
+    "ocorrencias": 1916,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "GRÃO DE OURO - CENTRO",
+    "cnpj": "25.257.735/0003-98",
+    "ocorrencias": 1158,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "R L DE OLIVEIRA MERCADINHO LTDA ME",
+    "cnpj": "11.074.872/0001-10",
+    "ocorrencias": 768,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER MAIS",
+    "cnpj": "21.380.625/0001-04",
+    "ocorrencias": 670,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO EBENEZER CESARAO LTDA",
+    "cnpj": "46.951.805/0001-11",
+    "ocorrencias": 475,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO DESCONTAO LTDA",
+    "cnpj": "11.569.109/0001-60",
+    "ocorrencias": 420,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL DE SÃO GONÇALO LTDA",
+    "cnpj": "49.611.315/0001-64",
+    "ocorrencias": 269,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "L G C COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+    "cnpj": "12.759.046/0001-78",
+    "ocorrencias": 240,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M V DA ROSA SUPERMERCADO",
+    "cnpj": "07.278.869/0001-41",
+    "ocorrencias": 201,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RC ALMEIDA COMÉRCIO DE ALIMENTOS LTDA",
+    "cnpj": "21.071.655/0001-20",
+    "ocorrencias": 158,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO DA LILI",
+    "cnpj": "12.123.464/0001-74",
+    "ocorrencias": 145,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "COMERCIO DE CARNES REIZAO DO RIO EIRELI",
+    "cnpj": "38.057.179/0001-96",
+    "ocorrencias": 85,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADOS BOM PRECO DE SAO JOAO LTDA",
+    "cnpj": "54.485.376/0001-62",
+    "ocorrencias": 82,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL DE PEDRA DE GUARATIBA LTDA",
+    "cnpj": "50.358.598/0001-63",
+    "ocorrencias": 43,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CLASSICOS COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "14.568.548/0001-47",
+    "ocorrencias": 28,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL PETRÓPOLIS",
+    "cnpj": "37.657.925/0005-43",
+    "ocorrencias": 15,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "GOOD MILK",
+    "cnpj": "28.385.180/0001-96",
+    "ocorrencias": 10,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADOS BOM PRECO & NEW MAR LTDA",
+    "cnpj": "50.858.863/0004-15",
+    "ocorrencias": 7,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M RIBEIRO COMERCIO DE PRODUTOS ALIMENTICIOS EM GERAL LTDA",
+    "cnpj": "32.708.840/0001-08",
+    "ocorrencias": 2,
+    "tecnico": "Marcio",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER COMPRAS JF2 SHANGRILA NOVO",
+    "cnpj": "61.221.987/0001-69",
+    "ocorrencias": 1869,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "ELENILDA REGINA MARINS GUIMARAES MERC ME",
+    "cnpj": "13.911.878/0001-20",
+    "ocorrencias": 1165,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIUM GENEROS ALIMENTICIOS LTDA",
+    "cnpj": "13.159.094/0006-00",
+    "ocorrencias": 821,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CASSIO E MARCIA - BAR E MERCEARIA LTDA ME",
+    "cnpj": "04.876.625/0001-72",
+    "ocorrencias": 618,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Ok",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO GUIMARAES FILHOS LTDA",
+    "cnpj": "50.547.492/0001-08",
+    "ocorrencias": 531,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PILARES DE MARICA SUPERMERCADO LTDA",
+    "cnpj": "18.059.045/0001-05",
+    "ocorrencias": 335,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO SERNOR",
+    "cnpj": "27.010.495/0001-96",
+    "ocorrencias": 305,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER MAIS F2",
+    "cnpj": "21.380.625/0002-87",
+    "ocorrencias": 264,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADOS CENTRO SUL LTDA",
+    "cnpj": "61.704.295/0001-71",
+    "ocorrencias": 205,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA THALES LTDA",
+    "cnpj": "01.652.081/0004-10",
+    "ocorrencias": 186,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CLASSICOS COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "14.568.548/0002-28",
+    "ocorrencias": 115,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO SAO SEBASTIAO DE PORCIUNCULA LTDA",
+    "cnpj": "13.445.418/0001-54",
+    "ocorrencias": 111,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA LEANDRO MOURA LTDA",
+    "cnpj": "04.377.802/0001-76",
+    "ocorrencias": 65,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "REDE DUX COMERCIO VAREJISTA LTDA",
+    "cnpj": "32.356.576/0001-82",
+    "ocorrencias": 33,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POR DO SOL F7 - COSTA COMPACTO",
+    "cnpj": "08.455.029/0001-70",
+    "ocorrencias": 32,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RD VIANA MINIMERCADO LTDA",
+    "cnpj": "13.619.207/0001-90",
+    "ocorrencias": 21,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "BRASIL WEST ALIMENTOS LTDA",
+    "cnpj": "52.144.228/0001-59",
+    "ocorrencias": 8,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADOS BOM PRECO & NEW MAR LTDA",
+    "cnpj": "50.858.863/0005-04",
+    "ocorrencias": 5,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MORABI ALIMENTOS LTDA",
+    "cnpj": "35.157.839/0003-84",
+    "ocorrencias": 2,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MORABI ALIMENTOS EIRELI",
+    "cnpj": "35.157.839/0002-01",
+    "ocorrencias": 1,
+    "tecnico": "Luiz Philipe",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MACHADO",
+    "cnpj": "35.824.374/0001-06",
+    "ocorrencias": 1764,
+    "tecnico": "Jonathan",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DE SEROPEDICA LTDA",
+    "cnpj": "50.366.423/0001-06",
+    "ocorrencias": 1173,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER COMPRAS TAQUARA JF NOVO",
+    "cnpj": "61.704.758/0001-03",
+    "ocorrencias": 873,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO SUPER OFERTA DE PARQUE SAO JOSE LTDA",
+    "cnpj": "27.024.711/0001-52",
+    "ocorrencias": 692,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO SÃO LUCAS",
+    "cnpj": "21.127.646/0001-04",
+    "ocorrencias": 495,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA M RIBEIRO FILHO LTDA",
+    "cnpj": "18.765.366/0002-06",
+    "ocorrencias": 386,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "JNH SUPERMERCADOS LTDA",
+    "cnpj": "32.455.926/0002-49",
+    "ocorrencias": 293,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO CAMPOS NOS LTDA",
+    "cnpj": "33.333.713/0001-26",
+    "ocorrencias": 227,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "NOVA 396 MERCEARIA LTDA",
+    "cnpj": "68.671.171/0001-86",
+    "ocorrencias": 212,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADOS RIO SUL DE QUEIMADOS LTDA",
+    "cnpj": "42.812.605/0001-27",
+    "ocorrencias": 174,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RAINHA DO RIO VARZEA",
+    "cnpj": "01.006.952/0001-85",
+    "ocorrencias": 125,
+    "tecnico": "Jonathan",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "POUCO PRECO COMERCIO DE ALIMENTOS E HORTIFRUTI EIR",
+    "cnpj": "32.396.759/0001-21",
+    "ocorrencias": 109,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CRISMI MERCADO LTDA",
+    "cnpj": "48.515.867/0001-06",
+    "ocorrencias": 66,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MIRANTE MARKET",
+    "cnpj": "34.100.505/0001-40",
+    "ocorrencias": 37,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M LUNA CEREAIS EIRELI",
+    "cnpj": "39.229.299/0001-96",
+    "ocorrencias": 31,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL VILA NOVA CNPJ NOVO",
+    "cnpj": "58.012.012/0001-16",
+    "ocorrencias": 20,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO ESPERANÇA BACAXÁ",
+    "cnpj": "09.653.290/0001-47",
+    "ocorrencias": 7,
+    "tecnico": "Jonathan",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "PANIFICADORA QUARTO CENTENARIO LTDA",
+    "cnpj": "22.784.363/0001-06",
+    "ocorrencias": 4,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DA VILA SAO LUIS LTDA",
+    "cnpj": "33.475.089/0001-00",
+    "ocorrencias": 2,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA SANTA LUZIA",
+    "cnpj": "61.343.052/0001-55",
+    "ocorrencias": 1,
+    "tecnico": "Jonathan",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL DE SAO GONCALO LTDA",
+    "cnpj": "49.611.315/0002-45",
+    "ocorrencias": 1649,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "ECONOMIA DO LAR BOM PRECO MACUCO",
+    "cnpj": "16.928.763/0001-37",
+    "ocorrencias": 1242,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CORTES PRICE MERCADO LTDA",
+    "cnpj": "11.758.346/0001-70",
+    "ocorrencias": 921,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DO LAUREANO LTDA",
+    "cnpj": "41.475.101/0001-04",
+    "ocorrencias": 672,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO LULINHA F1",
+    "cnpj": "10.774.640/0001-02",
+    "ocorrencias": 514,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO KARINE",
+    "cnpj": "18.765.366/0001-17",
+    "ocorrencias": 361,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO GALO BRANCO",
+    "cnpj": "27.885.904/0001-06",
+    "ocorrencias": 299,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ATACADAO E VAREJAO 4 IRMAOS LTDA",
+    "cnpj": "35.450.079/0001-37",
+    "ocorrencias": 249,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "R A G ATACAREJO LTDA",
+    "cnpj": "42.490.368/0001-25",
+    "ocorrencias": 209,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO IRMAOS CARIOCA (ANTIGO CAROL DO VILAR)",
+    "cnpj": "36.360.319/0001-75",
+    "ocorrencias": 165,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "L C PINTO COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "08.117.738/0001-45",
+    "ocorrencias": 133,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO DEL RIO LTDA",
+    "cnpj": "07.968.867/0001-84",
+    "ocorrencias": 105,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER MERCADO LONAGEAN LTDA ME",
+    "cnpj": "72.055.965/0001-92",
+    "ocorrencias": 67,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA E COMERCIO DE CEREAIS DO PARQUE UNIAO LTDA",
+    "cnpj": "11.272.592/0001-17",
+    "ocorrencias": 46,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "DOM PRIME COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "50.034.181/0001-45",
+    "ocorrencias": 28,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "JUZAN - RIO DA AREIA",
+    "cnpj": "07.258.484/0002-01",
+    "ocorrencias": 14,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADOS BOM PRECO E NEW MAR LTDA",
+    "cnpj": "50.858.863/0001-72",
+    "ocorrencias": 9,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER COMPRAS SEROPEDICA BODEGAO",
+    "cnpj": "58.816.569/0001-00",
+    "ocorrencias": 7,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PADARIA E MERCEARIA A MELHOR DA TAQUARA LTDA",
+    "cnpj": "73.805.863/0001-00",
+    "ocorrencias": 1,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PROJECT BRASIL",
+    "cnpj": "13.505.710/0001-15",
+    "ocorrencias": 1,
+    "tecnico": "Alexandre",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "HORTIFRUIT DO REI -REDE CARIOCA CDD",
+    "cnpj": "13.544.434/0001-02",
+    "ocorrencias": 1618,
+    "tecnico": "Beatriz",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIUM GENEROS ALIMENTICIOS LTDA (F3)",
+    "cnpj": "13.159.094/0003-50",
+    "ocorrencias": 1265,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCEARIA JPA BARRA LTDA",
+    "cnpj": "23.187.892/0001-87",
+    "ocorrencias": 925,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "K R M SOBRINHO COMERCIO ME",
+    "cnpj": "15.872.124/0001-34",
+    "ocorrencias": 694,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO BARCELOS LTDA",
+    "cnpj": "13.051.981/0001-48",
+    "ocorrencias": 490,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "AGUIMAEL COMERCIO DE GENEROS ALIMENTICIO LTDA",
+    "cnpj": "11.015.015/0001-40",
+    "ocorrencias": 415,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "DAM MAGAZINE MERCADO PADARIA E LANCHONETE LTDA",
+    "cnpj": "10.942.398/0001-39",
+    "ocorrencias": 265,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIUM GENEROS ALIMENTICIOS LTDA",
+    "cnpj": "13.159.094/0005-11",
+    "ocorrencias": 244,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO E PADARIA L M LOUZADA LTDA",
+    "cnpj": "13.537.908/0001-80",
+    "ocorrencias": 197,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL GALO BRANCO",
+    "cnpj": "62.389.144/0001-39",
+    "ocorrencias": 186,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "BOM DIA PALMARES FILIAL",
+    "cnpj": "48.963.114/0002-44",
+    "ocorrencias": 113,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO CARAPEBUS LTDA ME",
+    "cnpj": "26.373.360/0002-03",
+    "ocorrencias": 113,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POR DO SOL F3 - PESSEGUEIROS",
+    "cnpj": "13.390.177/0001-93",
+    "ocorrencias": 64,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "COTRINGER MERCEARIA E PANIFICACAO LTDA",
+    "cnpj": "50.938.790/0001-29",
+    "ocorrencias": 37,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FENIX DO COLUBANDE DISTRIBUIDORA LTDA",
+    "cnpj": "51.853.981/0001-50",
+    "ocorrencias": 30,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO PRINCESA",
+    "cnpj": "05.076.145/0001-90",
+    "ocorrencias": 20,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MHTM COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "18.689.975/0001-34",
+    "ocorrencias": 8,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO EXPANSÃO DE SILVA JARDIM LTDA",
+    "cnpj": "11.324.101/0001-34",
+    "ocorrencias": 3,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO O BOM DE SANTA CRUZ LTDA.",
+    "cnpj": "58.816.569/0002-90",
+    "ocorrencias": 3,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ADEMAR ALVES REZENDE",
+    "cnpj": "04.515.138/0001-84",
+    "ocorrencias": 1,
+    "tecnico": "Beatriz",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DE PRIMAVERA LTDA",
+    "cnpj": "33.765.158/0001-01",
+    "ocorrencias": 1553,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO IMPERIAL",
+    "cnpj": "15.713.927/0001-46",
+    "ocorrencias": 1290,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO DO APOLO 2 LTDA",
+    "cnpj": "44.334.989/0001-45",
+    "ocorrencias": 930,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "VALQUEIRE F1 - MATRIZ",
+    "cnpj": "10.852.154/0001-65",
+    "ocorrencias": 713,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "JF SUPERMERCADOS LTDA",
+    "cnpj": "48.282.039/0001-75",
+    "ocorrencias": 506,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "L. A. MARASSI MERCEARIA LTDA - EPP",
+    "cnpj": "12.392.614/0001-45",
+    "ocorrencias": 408,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "WINNER MERCADO VAREJISTA LTDA",
+    "cnpj": "46.600.907/0001-92",
+    "ocorrencias": 273,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MIX MARKET CAMPO GRANDE",
+    "cnpj": "61.316.795/0001-36",
+    "ocorrencias": 241,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MINI MERCADO EBENEZES EIRELI",
+    "cnpj": "40.404.683/0001-67",
+    "ocorrencias": 201,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO SUL DE NILOPOLIS LTDA",
+    "cnpj": "51.152.535/0001-19",
+    "ocorrencias": 171,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SM ECONOMIZE COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "03.690.307/0001-50",
+    "ocorrencias": 126,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO MARIA JOAQUINA LTDA",
+    "cnpj": "55.101.196/0001-00",
+    "ocorrencias": 113,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ATACABOM COMÉRCIO DE PRODUTOS ALIMENTÍCIOS EIRELI",
+    "cnpj": "33.764.966/0002-35",
+    "ocorrencias": 61,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POR DO SOL F1 - MACAÉ",
+    "cnpj": "18.869.111/0001-02",
+    "ocorrencias": 46,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO E PADARIA JJ PONTES LTDA",
+    "cnpj": "14.304.366/0001-69",
+    "ocorrencias": 28,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO MONTE SIÃO LTDA",
+    "cnpj": "13.759.514/0001-77",
+    "ocorrencias": 13,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO PLANÍCIE (NOVO CNPJ)",
+    "cnpj": "65.071.119/0001-09",
+    "ocorrencias": 10,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL MAIS PRECO CNPJ NOVO",
+    "cnpj": "57.978.228/0001-78",
+    "ocorrencias": 6,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL ITAIPUAÇU",
+    "cnpj": "57.489.708/0001-75",
+    "ocorrencias": 2,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "VYBE SUPERMERCADO ATACADISTA LTDA",
+    "cnpj": "47.327.122/0004-01",
+    "ocorrencias": 1,
+    "tecnico": "Marcos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL JARDIM LEAL LTDA",
+    "cnpj": "32.652.861/0001-40",
+    "ocorrencias": 1553,
+    "tecnico": "Wallace",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "ARMAZEM DO RIO",
+    "cnpj": "28.750.044/0001-58",
+    "ocorrencias": 1285,
+    "tecnico": "Wallace",
+    "statusCadastro": "OK",
+    "statusRejeitadas": "OK",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO FENIX",
+    "cnpj": "09.634.849/0001-91",
+    "ocorrencias": 952,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL LAUREANO",
+    "cnpj": "18.420.242/0001-08",
+    "ocorrencias": 696,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO GUIMARÃES FILHOS LTDA",
+    "cnpj": "50.547.492/0002-99",
+    "ocorrencias": 505,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FENIX SUPERMERCADO LTDA",
+    "cnpj": "39.711.483/0001-78",
+    "ocorrencias": 415,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "JNH SUPERMERCADO LTDA",
+    "cnpj": "32.455.926/0001-68",
+    "ocorrencias": 271,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO CARAPEBUS LTDA ME",
+    "cnpj": "26.373.360/0001-22",
+    "ocorrencias": 225,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "A M MACAE COMERCIOS DE ALIM. LTDA ME",
+    "cnpj": "18.343.960/0001-10",
+    "ocorrencias": 214,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO REDENTOR I LTDA",
+    "cnpj": "52.782.886/0001-76",
+    "ocorrencias": 163,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "TRUE VINE CEREAIS LTDA",
+    "cnpj": "41.732.193/0001-52",
+    "ocorrencias": 136,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ALMEIDA E ROCHA COMERCIO EIRELI",
+    "cnpj": "29.568.020/0001-45",
+    "ocorrencias": 95,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO ROMERO",
+    "cnpj": "33.310.149/0001-26",
+    "ocorrencias": 74,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "2 IRMÃOS DIPENEDO SUPERMERCADO",
+    "cnpj": "22.056.021/0001-61",
+    "ocorrencias": 57,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RC DE MIGUEL PEREIRA LTDA",
+    "cnpj": "52.909.395/0001-43",
+    "ocorrencias": 24,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POR DO SOL F6 - RIO DAS OSTRAS",
+    "cnpj": "23.887.274/0001-40",
+    "ocorrencias": 11,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "REMMAR",
+    "cnpj": "31.586.738/0001-06",
+    "ocorrencias": 7,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO HORTOLANDIA F2",
+    "cnpj": "33.973.107/0002-56",
+    "ocorrencias": 6,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO DO GUILHERME",
+    "cnpj": "05.864.994/0001-08",
+    "ocorrencias": 2,
+    "tecnico": "Wallace",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "A P MEDEIROS MERCEARIA EIRELI",
+    "cnpj": "31.224.769/0002-06",
+    "ocorrencias": 1409,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL DE XEREM LTDA",
+    "cnpj": "49.365.479/0001-59",
+    "ocorrencias": 1326,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MINIMERCADO JARDIM ROSARIO LTDA",
+    "cnpj": "19.722.068/0001-02",
+    "ocorrencias": 986,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "I. C. OTTE MONTEIRO SUPERMERCADO LTDA",
+    "cnpj": "04.287.842/0001-27",
+    "ocorrencias": 745,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "ESTRELA QUATIS",
+    "cnpj": "10.734.089/0001-73",
+    "ocorrencias": 533,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MEGA MERCADO",
+    "cnpj": "26.156.068/0001-58",
+    "ocorrencias": 336,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "COMERCIAL SURUBI LTDA",
+    "cnpj": "46.933.320/0001-03",
+    "ocorrencias": 313,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL FIGUEIRA (CNPJ NOVO)",
+    "cnpj": "37.496.930/0001-98",
+    "ocorrencias": 254,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FURTADO GUIMARAES MERCEARIA LTDA",
+    "cnpj": "09.629.805/0001-73",
+    "ocorrencias": 212,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "FCR SUPERMERCADO LTDA",
+    "cnpj": "34.791.241/0002-07",
+    "ocorrencias": 179,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPER REDE COSMOS - POUPMAIS",
+    "cnpj": "08.852.789/0001-10",
+    "ocorrencias": 121,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RG FREZ LTDA",
+    "cnpj": "11.079.124/0001-20",
+    "ocorrencias": 101,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "M. M. TOLEDO ME",
+    "cnpj": "02.907.356/0002-10",
+    "ocorrencias": 69,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "POR DO SOL F2 - CASIMIRO",
+    "cnpj": "15.727.791/0001-23",
+    "ocorrencias": 55,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SILVA DE PAULA COMERCIO PRODUTOS ALIMENTICIOS EIRELI",
+    "cnpj": "36.309.901/0001-07",
+    "ocorrencias": 24,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO JPA LTDA",
+    "cnpj": "53.911.958/0001-09",
+    "ocorrencias": 12,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO T F DA COSTA LTDA",
+    "cnpj": "17.853.709/0002-13",
+    "ocorrencias": 8,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADOS RIO SUL DE AUSTIN LTDA",
+    "cnpj": "40.897.272/0001-50",
+    "ocorrencias": 5,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADÃO ECONOMICO DE MACABU LTDA",
+    "cnpj": "41.239.352/0001-81",
+    "ocorrencias": 2,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "A ALVES DE OLIVEIRA DISTRIBUIDORA",
+    "cnpj": "33.973.107/0001-75",
+    "ocorrencias": 1,
+    "tecnico": "Luiz Carlos",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "F E R PONTES MERCEARIA",
+    "cnpj": "28.969.247/0001-30",
+    "ocorrencias": 1407,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "RIO SUL DO PILAR",
+    "cnpj": "33.255.424/0001-56",
+    "ocorrencias": 1387,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CEHAB FRIGOMELLO",
+    "cnpj": "30.411.096/0001-41",
+    "ocorrencias": 969,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO SUPERMAR LOJA 2",
+    "cnpj": "61.667.161/0001-28",
+    "ocorrencias": 717,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PARAISO COMERCIO DE CEREAIS DO BOQUEIRAO EIRELLI E",
+    "cnpj": "21.008.582/0001-22",
+    "ocorrencias": 516,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "IMPERIAL F2",
+    "cnpj": "15.713.927/0002-27",
+    "ocorrencias": 390,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "CASA DOS CEREAIS - ITATIAIA",
+    "cnpj": "68.746.239/0001-49",
+    "ocorrencias": 291,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PINHEIRO E CONCEICAO MERCEARIA EIRELI",
+    "cnpj": "22.427.300/0001-94",
+    "ocorrencias": 220,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO IDEAL PORTO DO CARRO EIRELI - EPP",
+    "cnpj": "22.778.332/0001-34",
+    "ocorrencias": 219,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RC DE ITAGUAI LTDA",
+    "cnpj": "58.113.396/0001-63",
+    "ocorrencias": 162,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "H V O SILVA COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "29.126.533/0002-87",
+    "ocorrencias": 139,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO MACABU",
+    "cnpj": "35.833.649/0001-78",
+    "ocorrencias": 94,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "PAME SUPERMERCADO E FRIOS LTDA",
+    "cnpj": "26.185.052/0002-54",
+    "ocorrencias": 72,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO HEXA",
+    "cnpj": "07.984.769/0001-30",
+    "ocorrencias": 61,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO ATLANTICO BOCA DO MATO NOVO CNPJ",
+    "cnpj": "38.461.591/0001-77",
+    "ocorrencias": 22,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "SUPERMERCADO RIO COMPRIDO LTDA",
+    "cnpj": "52.722.054/0001-64",
+    "ocorrencias": 11,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "MERCADO RIO SUL DE CAMPO GRANDE EIRELI",
+    "cnpj": "35.816.060/0001-61",
+    "ocorrencias": 7,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "LATICÍNIOS CENTRAL",
+    "cnpj": "29.786.463/0001-02",
+    "ocorrencias": 3,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "VYBE SUPERMERCADO ATACADISTA LTDA",
+    "cnpj": "47.327.122/0002-31",
+    "ocorrencias": 3,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  },
+  {
+    "cliente": "VYBE SUPERMERCADO ATACADISTA LTDA",
+    "cnpj": "47.327.122/0003-12",
+    "ocorrencias": 1,
+    "tecnico": "Matheus Montimór",
+    "statusCadastro": "Pendente",
+    "statusRejeitadas": "Pendente",
+    "observacao": ""
+  }
+]
