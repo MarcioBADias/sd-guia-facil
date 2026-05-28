@@ -30,38 +30,42 @@ interface Cliente {
   observacao: string;
 }
 
+type Estado = "pendente" | "processo" | "feito";
+type ColKey = "xml" | "cadastro" | "rejeitadas";
+type RowState = { xml: Estado; cadastro: Estado; rejeitadas: Estado };
+
 const PLANILHA_URL =
   "https://docs.google.com/spreadsheets/d/1goU0joU-JkFbzdKAhmPYqoRnmVUrxDfeTQwbdDQop6E/edit?gid=1928872031#gid=1928872031";
-const STORAGE_KEY = "rejeitadas-correcao-feito";
+const STORAGE_KEY = "rejeitadas-correcao-estados-v2";
 
 const clientes = clientesData as Cliente[];
 
-const statusBadge = (status: string) => {
+const inferirEstado = (status: string): Estado => {
   const s = (status || "").trim().toLowerCase();
-  if (s === "ok") {
+  if (s === "ok") return "feito";
+  if (s === "em andamento" || s === "em processo") return "processo";
+  return "pendente";
+};
+
+const proximoEstado = (e: Estado): Estado =>
+  e === "pendente" ? "processo" : e === "processo" ? "feito" : "pendente";
+
+const StatusChip = ({ estado }: { estado: Estado }) => {
+  if (estado === "feito")
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-green-500/15 text-green-600 dark:text-green-400 text-xs font-medium">
-        <CheckCircle2 className="h-3 w-3" /> OK
+      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-green-500/15 text-green-600 dark:text-green-400 text-xs font-medium">
+        <CheckCircle2 className="h-3 w-3" /> Feito
       </span>
     );
-  }
-  if (s === "em andamento") {
+  if (estado === "processo")
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 text-xs font-medium">
-        <Clock className="h-3 w-3" /> Em andamento
+      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 text-xs font-medium">
+        <Clock className="h-3 w-3" /> Em processo
       </span>
     );
-  }
-  if (!s) {
-    return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-muted text-muted-foreground text-xs font-medium">
-        <AlertCircle className="h-3 w-3" /> Pendente
-      </span>
-    );
-  }
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary/15 text-primary text-xs font-medium">
-      {status}
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
+      <AlertCircle className="h-3 w-3" /> Pendente
     </span>
   );
 };
@@ -69,25 +73,53 @@ const statusBadge = (status: string) => {
 const RejeitadasCorrecao = () => {
   const [tecnico, setTecnico] = useState<string>("__all__");
   const [busca, setBusca] = useState("");
-  const [feitos, setFeitos] = useState<Record<string, boolean>>({});
+  const [estados, setEstados] = useState<Record<string, RowState>>({});
 
+  // initialize from data + persisted overrides
   useEffect(() => {
+    let saved: Record<string, RowState> = {};
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setFeitos(JSON.parse(raw));
+      if (raw) saved = JSON.parse(raw);
     } catch {
       /* noop */
     }
+    const init: Record<string, RowState> = {};
+    clientes.forEach((c) => {
+      init[c.cnpj] = saved[c.cnpj] ?? {
+        xml: "pendente",
+        cadastro: inferirEstado(c.statusCadastro),
+        rejeitadas: inferirEstado(c.statusRejeitadas),
+      };
+    });
+    setEstados(init);
   }, []);
 
-  const setFeito = (cnpj: string, value: boolean) => {
-    setFeitos((prev) => {
-      const next = { ...prev, [cnpj]: value };
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-      } catch {
-        /* noop */
-      }
+  const persist = (next: Record<string, RowState>) => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    } catch {
+      /* noop */
+    }
+  };
+
+  const ciclar = (cnpj: string, col: ColKey) => {
+    setEstados((prev) => {
+      const atual = prev[cnpj] ?? { xml: "pendente", cadastro: "pendente", rejeitadas: "pendente" };
+      const next = { ...prev, [cnpj]: { ...atual, [col]: proximoEstado(atual[col]) } };
+      persist(next);
+      return next;
+    });
+  };
+
+  const toggleFeito = (cnpj: string, marcar: boolean) => {
+    setEstados((prev) => {
+      const atual = prev[cnpj] ?? { xml: "pendente", cadastro: "pendente", rejeitadas: "pendente" };
+      const novo: RowState = marcar
+        ? { xml: "feito", cadastro: "feito", rejeitadas: "feito" }
+        : { xml: "pendente", cadastro: "pendente", rejeitadas: "pendente" };
+      const next = { ...prev, [cnpj]: novo };
+      persist(next);
       return next;
     });
   };
@@ -115,17 +147,19 @@ const RejeitadasCorrecao = () => {
     });
   }, [tecnico, busca]);
 
+  const isAllFeito = (st?: RowState) =>
+    !!st && st.xml === "feito" && st.cadastro === "feito" && st.rejeitadas === "feito";
+
   const stats = useMemo(() => {
     const total = filtrados.length;
-    const ok = filtrados.filter(
-      (c) =>
-        (c.statusCadastro || "").trim().toLowerCase() === "ok" &&
-        (c.statusRejeitadas || "").trim().toLowerCase() === "ok",
-    ).length;
-    const feitosCount = filtrados.filter((c) => feitos[c.cnpj]).length;
-    const pendentes = total - feitosCount;
-    return { total, ok, feitosCount, pendentes };
-  }, [filtrados, feitos]);
+    const feitosCount = filtrados.filter((c) => isAllFeito(estados[c.cnpj])).length;
+    const emProcesso = filtrados.filter((c) => {
+      const s = estados[c.cnpj];
+      return s && !isAllFeito(s) && (s.xml === "processo" || s.cadastro === "processo" || s.rejeitadas === "processo" || s.xml === "feito" || s.cadastro === "feito" || s.rejeitadas === "feito");
+    }).length;
+    const pendentes = total - feitosCount - emProcesso;
+    return { total, feitosCount, emProcesso, pendentes };
+  }, [filtrados, estados]);
 
   return (
     <div className="space-y-6">
@@ -133,8 +167,8 @@ const RejeitadasCorrecao = () => {
         <div>
           <h1 className="text-3xl font-bold mb-2">🛠️ Correção de Rejeitadas</h1>
           <p className="text-muted-foreground">
-            Acompanhe os clientes em correção por técnico. Marque como feito e
-            atualize a planilha original no Google Drive.
+            Clique em cada status para alternar entre Pendente → Em processo → Feito.
+            Quando os três estiverem feitos, o toggle "Feito" é ativado automaticamente.
           </p>
         </div>
         <Button asChild>
@@ -154,25 +188,25 @@ const RejeitadasCorrecao = () => {
         </div>
         <div className="p-4 rounded-lg border border-border bg-card">
           <div className="flex items-center gap-2 text-muted-foreground text-xs uppercase tracking-wide">
-            <CheckCircle2 className="h-3.5 w-3.5" /> Concluídos (OK)
+            <CheckCircle2 className="h-3.5 w-3.5" /> Concluídos
           </div>
           <div className="text-2xl font-bold mt-1 text-green-600 dark:text-green-400">
-            {stats.ok}
+            {stats.feitosCount}
           </div>
         </div>
         <div className="p-4 rounded-lg border border-border bg-card">
           <div className="flex items-center gap-2 text-muted-foreground text-xs uppercase tracking-wide">
-            <CheckCircle2 className="h-3.5 w-3.5" /> Marcados feito
+            <Clock className="h-3.5 w-3.5" /> Em processo
           </div>
-          <div className="text-2xl font-bold mt-1 text-primary">
-            {stats.feitosCount}
+          <div className="text-2xl font-bold mt-1 text-yellow-600 dark:text-yellow-400">
+            {stats.emProcesso}
           </div>
         </div>
         <div className="p-4 rounded-lg border border-border bg-card">
           <div className="flex items-center gap-2 text-muted-foreground text-xs uppercase tracking-wide">
             <AlertCircle className="h-3.5 w-3.5" /> Pendentes
           </div>
-          <div className="text-2xl font-bold mt-1 text-yellow-600 dark:text-yellow-400">
+          <div className="text-2xl font-bold mt-1 text-muted-foreground">
             {stats.pendentes}
           </div>
         </div>
@@ -210,10 +244,11 @@ const RejeitadasCorrecao = () => {
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/50">
-                <TableHead className="w-[28%]">Cliente</TableHead>
+                <TableHead className="w-[24%]">Cliente</TableHead>
                 <TableHead>CNPJ</TableHead>
                 <TableHead className="text-center">Ocorrências</TableHead>
                 <TableHead>Técnico</TableHead>
+                <TableHead>XML Baixado</TableHead>
                 <TableHead>Cadastro produtos</TableHead>
                 <TableHead>Envio rejeitadas</TableHead>
                 <TableHead className="text-center">Feito</TableHead>
@@ -222,31 +257,58 @@ const RejeitadasCorrecao = () => {
             <TableBody>
               {filtrados.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={7} className="text-center text-muted-foreground py-8">
+                  <TableCell colSpan={8} className="text-center text-muted-foreground py-8">
                     Nenhum cliente encontrado para o filtro selecionado.
                   </TableCell>
                 </TableRow>
               ) : (
                 filtrados.map((c, idx) => {
                   const key = `${c.cnpj}-${idx}`;
-                  const isFeito = !!feitos[c.cnpj];
+                  const st = estados[c.cnpj] ?? {
+                    xml: "pendente" as Estado,
+                    cadastro: "pendente" as Estado,
+                    rejeitadas: "pendente" as Estado,
+                  };
+                  const allFeito = isAllFeito(st);
                   return (
-                    <TableRow
-                      key={key}
-                      className={isFeito ? "bg-green-500/5" : ""}
-                    >
+                    <TableRow key={key} className={allFeito ? "bg-green-500/5" : ""}>
                       <TableCell className="font-medium">{c.cliente}</TableCell>
                       <TableCell className="font-mono text-xs text-muted-foreground">
                         {c.cnpj}
                       </TableCell>
                       <TableCell className="text-center">{c.ocorrencias}</TableCell>
                       <TableCell>{c.tecnico || "—"}</TableCell>
-                      <TableCell>{statusBadge(c.statusCadastro)}</TableCell>
-                      <TableCell>{statusBadge(c.statusRejeitadas)}</TableCell>
+                      <TableCell>
+                        <button
+                          onClick={() => ciclar(c.cnpj, "xml")}
+                          className="hover:opacity-80 transition-opacity"
+                          title="Clique para alternar"
+                        >
+                          <StatusChip estado={st.xml} />
+                        </button>
+                      </TableCell>
+                      <TableCell>
+                        <button
+                          onClick={() => ciclar(c.cnpj, "cadastro")}
+                          className="hover:opacity-80 transition-opacity"
+                          title="Clique para alternar"
+                        >
+                          <StatusChip estado={st.cadastro} />
+                        </button>
+                      </TableCell>
+                      <TableCell>
+                        <button
+                          onClick={() => ciclar(c.cnpj, "rejeitadas")}
+                          className="hover:opacity-80 transition-opacity"
+                          title="Clique para alternar"
+                        >
+                          <StatusChip estado={st.rejeitadas} />
+                        </button>
+                      </TableCell>
                       <TableCell className="text-center">
                         <Switch
-                          checked={isFeito}
-                          onCheckedChange={(v) => setFeito(c.cnpj, v)}
+                          checked={allFeito}
+                          onCheckedChange={(v) => toggleFeito(c.cnpj, v)}
                         />
                       </TableCell>
                     </TableRow>
@@ -259,8 +321,8 @@ const RejeitadasCorrecao = () => {
       </div>
 
       <p className="text-xs text-muted-foreground">
-        As marcações "Feito" são salvas localmente no seu navegador. Após
-        concluir, atualize também a planilha original no Google Drive.
+        As marcações são salvas localmente no seu navegador. Após concluir,
+        atualize também a planilha original no Google Drive.
       </p>
     </div>
   );
