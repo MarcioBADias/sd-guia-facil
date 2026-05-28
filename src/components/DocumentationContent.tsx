@@ -5,6 +5,7 @@ import CodeBlock from "./CodeBlock";
 import InfoBox from "./InfoBox";
 import DuplicateChecker from "./DuplicateChecker";
 import DivergenceChecker from "./DivergenceChecker";
+import RejeitadasCorrecao from "./RejeitadasCorrecao";
 import { Checkbox } from "@/components/ui/checkbox";
 
 interface VideoCardProps {
@@ -1674,7 +1675,8 @@ C:\\Windows\\SysWOW64`}
           </div>
         );
 
-
+      case "rejeitadas-correcao":
+        return <RejeitadasCorrecao />;
 
       default:
         return (
