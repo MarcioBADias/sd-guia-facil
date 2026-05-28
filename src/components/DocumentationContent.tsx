@@ -1675,7 +1675,8 @@ C:\\Windows\\SysWOW64`}
           </div>
         );
 
-
+      case "rejeitadas-correcao":
+        return <RejeitadasCorrecao />;
 
       default:
         return (
