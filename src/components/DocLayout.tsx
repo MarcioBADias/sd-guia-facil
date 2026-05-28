@@ -84,6 +84,14 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       ]
     },
     {
+      id: "rejeitadas",
+      title: "Correção de Rejeitadas",
+      icon: AlertTriangle,
+      items: [
+        { id: "rejeitadas-correcao", title: "Clientes por Técnico" }
+      ]
+    },
+    {
       id: "troubleshooting",
       title: "Solução de Problemas",
       icon: Wrench,
