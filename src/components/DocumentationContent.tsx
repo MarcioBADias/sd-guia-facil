@@ -1430,128 +1430,336 @@ C:\\Windows\\SysWOW64`}
         return (
           <div className="space-y-6">
             <div className="py-4">
-              <h1 className="text-3xl font-bold mb-2">📋 CHECKLIST – ATUALIZAÇÃO REFORMA TRIBUTÁRIA</h1>
-              <a
-                href="https://docs.google.com/spreadsheets/d/18auuolxCSwylradsb9kUkhUhBqQRq-3rVXUCrbmQwsM/edit?gid=1964349410#gid=1964349410"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Abrir Planilha de Atualizações
-              </a>
+              <h1 className="text-3xl font-bold mb-2">📋 PROCESSO PADRÃO – ATUALIZAÇÃO SDSuper / SDPDV (REFORMA TRIBUTÁRIA)</h1>
+              <p className="text-muted-foreground mb-4">
+                Siga as diretrizes abaixo para a atualização segura do servidor e PDVs.
+              </p>
+              
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1691mvDxyPPyJNd_c1gr858N0YDfKRFCvBEkTjslTmS4/edit?gid=1129167289#gid=1129167289"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Planilha de Acompanhamento (Davi)
+                </a>
+                <a
+                  href="https://docs.google.com/spreadsheets/d/18auuolxCSwylradsb9kUkhUhBqQRq-3rVXUCrbmQwsM/edit?gid=1964349410#gid=1964349410"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Planilha Geral de Atualizações
+                </a>
+              </div>
             </div>
 
-            <StepCard step={1} title="Versões Obrigatórias" important>
-              <div className="grid md:grid-cols-2 gap-3 text-sm">
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDSuper</span>
-                  <span className="ml-auto font-bold text-primary">10.2.2597</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">Sentinela</span>
-                  <span className="ml-auto font-bold text-primary">10.2.926</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDSuperX</span>
-                  <span className="ml-auto font-bold text-primary">11.2.526</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDPdv</span>
-                  <span className="ml-auto font-bold text-primary">355</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDPdv Pro</span>
-                  <span className="ml-auto font-bold text-primary">147</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDSync</span>
-                  <span className="ml-auto font-bold text-primary">19</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDCarga</span>
-                  <span className="ml-auto font-bold text-primary">12.1.153.0</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDRestServer</span>
-                  <span className="ml-auto font-bold text-primary">49</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDTributário</span>
-                  <span className="ml-auto font-bold text-primary">1.0.53</span>
-                </div>
-                <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
-                  <span className="font-medium">SDAtualizador</span>
-                  <span className="ml-auto font-bold text-primary">13.0.12495</span>
+            <div className="grid lg:grid-cols-3 gap-6">
+              {/* Left Column: Interactive Checklists */}
+              <div className="lg:col-span-1 space-y-6">
+                <div className="sticky top-6 space-y-6">
+                  <StepCard step={1} title="Versões Obrigatórias" important>
+                    <div className="grid grid-cols-1 gap-2 text-xs">
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDSuper</span>
+                        <span className="ml-auto font-bold text-primary">10.2.2597</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">Sentinela</span>
+                        <span className="ml-auto font-bold text-primary">10.2.926</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDSuperX</span>
+                        <span className="ml-auto font-bold text-primary">11.2.526</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDPdv</span>
+                        <span className="ml-auto font-bold text-primary">355</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDPdv Pro</span>
+                        <span className="ml-auto font-bold text-primary">147</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDSync</span>
+                        <span className="ml-auto font-bold text-primary">19</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDCarga</span>
+                        <span className="ml-auto font-bold text-primary">12.1.153.0</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDRestServer</span>
+                        <span className="ml-auto font-bold text-primary">49</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDTributário</span>
+                        <span className="ml-auto font-bold text-primary">1.0.53</span>
+                      </div>
+                      <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-muted/30">
+                        <span className="font-medium">SDAtualizador</span>
+                        <span className="ml-auto font-bold text-primary">13.0.12495</span>
+                      </div>
+                    </div>
+                  </StepCard>
+
+                  <StepCard step={2} title="Checklist Rápido" important>
+                    <div className="space-y-2">
+                      {[
+                        "Enviar contingências pendentes",
+                        "Criar usuário SDSuper no banco",
+                        "Criar índices e chaves estrangeiras",
+                        "Ativar índices do banco",
+                        "Testar venda no Invoicy",
+                        "Atualizar planilha de controle",
+                        "Teste de carga em todos os caixas",
+                        "Validar Sentinela sem erros"
+                      ].map((item, idx) => (
+                        <label key={idx} className="flex items-center gap-2.5 p-1.5 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
+                          <Checkbox />
+                          <span className="text-xs font-medium">{item}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </StepCard>
                 </div>
               </div>
-            </StepCard>
 
-            <StepCard step={2} title="Checklist de Atualização" important>
-              <div className="space-y-2">
-                {[
-                  "Atualizar SDSuper",
-                  "Atualizar Sentinela",
-                  "Atualizar SDSuperX",
-                  "Atualizar SDPdv",
-                  "Atualizar SDPdv Pro",
-                  "Atualizar SDSync",
-                  "Atualizar SDCarga",
-                  "Atualizar SDRestServer",
-                  "Atualizar SDTributário",
-                  "Atualizar SDAtualizador"
-                ].map((item, idx) => (
-                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
-                    <Checkbox />
-                    <span className="text-sm">{item}</span>
-                  </label>
-                ))}
+              {/* Right Column: Detailed Procedure */}
+              <div className="lg:col-span-2 space-y-6">
+                <StepCard step={1} title="Antes de iniciar qualquer atualização" important>
+                  <p className="text-sm font-medium mb-3">Antes de atualizar qualquer cliente, é obrigatório:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Verificar se existem contingências pendentes nos PDVs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Enviar todas as contingências antes de iniciar o processo</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>
+                        Verificar versão atual: caso seja versão <strong>menor que 321</strong>, é necessário fechar o caixa e validar se as vendas e fechamento de caixa constam no SDSuper.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2 text-emerald-600 dark:text-emerald-400 font-semibold">
+                      <span className="mt-0.5">🔹</span>
+                      <span>Somente após isso iniciar a atualização do servidor e dos PDVs.</span>
+                    </li>
+                  </ul>
+                </StepCard>
+
+                <StepCard step={2} title="PDVs Linux">
+                  <InfoBox type="success" title="Sem atualizações para Linux">
+                    Os PDVs Linux <strong>não precisam ser atualizados</strong>, pois não irão enviar dados da Reforma Tributária e nem notas.
+                  </InfoBox>
+                </StepCard>
+
+                <StepCard step={3} title="Atualização do servidor">
+                  <p className="text-sm mb-3">
+                    Atualizar todas as aplicações no servidor conforme o kit update Reforma que será enviado.
+                  </p>
+                  <InfoBox type="info" title="Validação obrigatória">
+                    Após a atualização, validar se as aplicações subiram corretamente e se não ficaram erros aparentes.
+                  </InfoBox>
+                </StepCard>
+
+                <StepCard step={4} title="Clientes com parceiro fiscal">
+                  <p className="text-sm font-medium mb-3">Nos clientes que possuem parceiro fiscal (ex: Acerto Fiscal):</p>
+                  <ul className="space-y-2 text-sm mb-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Atualizar todas as aplicações no servidor</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Confirmar se o <strong>SDTributário</strong> ficou em execução</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Validar se o SDTributário está sem erros</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Realizar o envio de carga para os PDVs</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground italic">
+                    Após isso, seguir com o acompanhamento normal do cliente.
+                  </p>
+                </StepCard>
+
+                <StepCard step={5} title="Clientes sem parceiro fiscal" important>
+                  <p className="text-sm mb-3">
+                    Nos clientes que não possuem parceiro fiscal, será necessário realizar uma venda de teste após a atualização do servidor.
+                  </p>
+                  <p className="text-sm font-medium mb-2">
+                    Primeiro, localizar no banco do cliente um produto ativo que possua informação de IBS/CBS:
+                  </p>
+                  <div className="space-y-2 text-xs text-muted-foreground bg-muted/40 p-3 rounded-md mb-3 border border-border">
+                    <div>1️⃣ Abrir o <strong>IBExpert</strong></div>
+                    <div>2️⃣ Acessar o banco: <strong>SDSuper.fdb</strong></div>
+                    <div>3️⃣ Executar o SQL abaixo:</div>
+                  </div>
+                  
+                  <CodeBlock title="Consulta de Produto com IBS/CBS" language="sql">{`Select * 
+from produtos 
+where widaliquotaibsuf is not null
+  and wstatus is null;`}</CodeBlock>
+
+                  <p className="text-sm font-medium mt-4 mb-2">Após localizar o produto:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Verificar o código do produto retornado na consulta</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Realizar uma venda de teste com esse produto em apenas 1 PDV</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Após a venda, validar no Invoicy se a nota foi autorizada ou se ficou rejeitada</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
+                      <span className="mt-0.5">🔹</span>
+                      <span>Caso identifique que a venda foi autorizada, pular para o <strong>Passo 7</strong></span>
+                    </li>
+                  </ul>
+                </StepCard>
+
+                <StepCard step={6} title="Caso a venda fique rejeitada (Saneamento)" status="warning">
+                  <p className="text-sm mb-3">
+                    Se a venda de teste ficar rejeitada no Invoicy, executar os SQLs de saneamento no banco do cliente.
+                  </p>
+                  <div className="space-y-1 text-xs text-muted-foreground bg-muted/40 p-3 rounded-md mb-3 border border-border">
+                    <div>1️⃣ Abrir o <strong>IBExpert</strong></div>
+                    <div>2️⃣ Acessar o banco: <strong>SDSuper.fdb</strong></div>
+                    <div>3️⃣ Ir em: <strong>Tools → Script Executive</strong></div>
+                    <div>4️⃣ Colar os SQLs abaixo e clicar em executar (F9)</div>
+                  </div>
+
+                  <CodeBlock title="SQL Saneamento de Tributos" language="sql">{`Update Produtos Set WIDALIQUOTAIBS = Null where WIDALIQUOTAIBS is not Null;
+Update Produtos Set WIDALIQUOTACBS = Null where WIDALIQUOTACBS is not Null;
+Update Produtos Set WIDALIQUOTAIS = Null where WIDALIQUOTAIS is not Null;
+Update Produtos Set WCLASSIBSCBS = Null where WCLASSIBSCBS is not Null;
+Update Produtos Set WIDALIQUOTAIBSUF = Null where WIDALIQUOTAIBSUF is not Null;
+Update Produtos Set WIDALIQUOTAIBSMUN = Null where WIDALIQUOTAIBSMUN is not Null;`}</CodeBlock>
+
+                  <p className="text-sm font-medium mt-4 mb-2">Após executar os SQLs:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Enviar carga novamente para os PDVs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Fazer uma nova venda de teste</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Validar novamente no Invoicy se a venda foi autorizada</span>
+                    </li>
+                  </ul>
+                </StepCard>
+
+                <StepCard step={7} title="Atualização dos demais PDVs">
+                  <p className="text-sm font-medium mb-3">Após o teste ser aprovado:</p>
+                  <ul className="space-y-2 text-sm mb-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Atualizar os demais PDVs para a versão <strong>361 ou superior</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Atualizar apenas os PDVs que estiverem abaixo da versão <strong>355</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2 font-medium">
+                      <span className="text-amber-500 mt-0.5">⚠️</span>
+                      <span>PDVs que já estiverem na versão 355 ou superior não precisam ser atualizados</span>
+                    </li>
+                  </ul>
+                  <InfoBox type="success" title="Lembrete Linux">
+                    Os PDVs Linux não precisam ser atualizados, pois não irão enviar dados da Reforma Tributária e nem notas.
+                  </InfoBox>
+                  <InfoBox type="info" title="Lembrete sobre Banco de Dados">
+                    Não é necessário matar o banco de dados para atualizar o SDPdv em versões acima da 321.
+                  </InfoBox>
+                </StepCard>
+
+                <StepCard step={8} title="Atualização da planilha de acompanhamento" important>
+                  <p className="text-sm mb-3">Na planilha de controle, será necessário:</p>
+                  <ul className="space-y-2 text-sm mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Criar uma coluna para informar a data de atualização</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Nos clientes já concluídos, preencher a data com a data de hoje</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">🔹</span>
+                      <span>Manter a planilha atualizada conforme cada cliente for concluído</span>
+                    </li>
+                  </ul>
+                  
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1691mvDxyPPyJNd_c1gr858N0YDfKRFCvBEkTjslTmS4/edit?gid=1129167289#gid=1129167289"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md transition-colors"
+                  >
+                    <ExternalLink className="h-4.5 w-4.5" />
+                    Acessar Planilha de Controle (Davi)
+                  </a>
+                </StepCard>
+
+                {/* Flow Summary Timeline */}
+                <div className="p-6 rounded-lg border border-border bg-gradient-subtle">
+                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                    <span>📌 Resumo do Fluxo</span>
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      {[
+                        "1️⃣ Enviar contingências pendentes",
+                        "2️⃣ Atualizar aplicações no servidor",
+                        "3️⃣ Validar SDTributário, se houver parceiro fiscal",
+                        "4️⃣ Enviar carga para os PDVs",
+                        "5️⃣ Localizar produto ativo com IBS/CBS no banco",
+                        "6️⃣ Fazer venda de teste em 1 PDV"
+                      ].map((fluxo, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm font-medium">
+                          <span className="text-muted-foreground">{fluxo}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        "7️⃣ Validar a venda no Invoicy",
+                        "8️⃣ Se rejeitar, executar SQLs de saneamento",
+                        "9️⃣ Reenviar carga e testar novamente",
+                        "🔟 Atualizar demais PDVs para versão 361+ quando necessário",
+                        "1️⃣1️⃣ Atualizar a planilha com versão, data e avanço da meta"
+                      ].map((fluxo, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm font-medium">
+                          <span className="text-muted-foreground">{fluxo}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-border/60 text-xs text-emerald-600 dark:text-emerald-400 font-medium italic">
+                    ✅ Após concluir cada cliente, a planilha deve ser atualizada imediatamente para mantermos o acompanhamento correto do projeto.
+                  </div>
+                </div>
               </div>
-            </StepCard>
-
-            <StepCard step={3} title="Procedimento obrigatório após atualizar o SDSuper" important>
-              <p className="mb-3 text-sm">Ir em: <strong>Controle → Computador → Manutenção de Dados</strong></p>
-              <div className="space-y-2">
-                {[
-                  "Criar usuário SDSuper no banco de vendas",
-                  "Criar índices de chaves estrangeiras",
-                  "Ativar os índices"
-                ].map((item, idx) => (
-                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
-                    <Checkbox />
-                    <span className="text-sm">{item}</span>
-                  </label>
-                ))}
-              </div>
-            </StepCard>
-
-            <InfoBox type="warning" title="Importante">
-              Não é necessário matar o banco de dados para atualizar o SDPdv em versões acima da 321.
-            </InfoBox>
-
-            <StepCard step={4} title="Após atualizar os PDV's">
-              <div className="space-y-2">
-                <label className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
-                  <Checkbox />
-                  <span className="text-sm">Realizar envio das contingências</span>
-                </label>
-              </div>
-            </StepCard>
-
-            <StepCard step={5} title="Após finalizar todas as atualizações" important>
-              <div className="space-y-2">
-                {[
-                  "Preencher a planilha enviada pelo Davi no grupo",
-                  "Realizar teste de carga em todos os caixas",
-                  "Validar se o Sentinela está sem erros"
-                ].map((item, idx) => (
-                  <label key={idx} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors">
-                    <Checkbox />
-                    <span className="text-sm">{item}</span>
-                  </label>
-                ))}
-              </div>
-            </StepCard>
+            </div>
           </div>
         );
 
