@@ -5,13 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import ThemeToggle from "@/components/ThemeToggle";
 import logoSD from "@/assets/logo-sd.png";
 
-interface DocLayoutProps {
-  children: React.ReactNode;
-  currentSection: string;
-  onSectionChange: (section: string) => void;
-}
-
-const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps) => {
+const DocLayout = ({ children, currentSection, onSectionChange }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const sections = [
@@ -44,6 +38,15 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         { id: "retaguarda-config", title: "Configuração" },
         { id: "retaguarda-final", title: "Configurações Finais" },
         { id: "retaguarda-acerto-fiscal", title: "Acerto Fiscal" }
+      ]
+    },
+    {
+      id: "manual",
+      title: "Manuais SDSuper",
+      icon: Book,
+      items: [
+        { id: "manual-contra-nota-mei", title: "Contra Nota MEI" },
+        { id: "manual-administradora-cartao", title: "Administradora de Cartão" }
       ]
     },
     {
@@ -98,7 +101,9 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
       items: [
         { id: "pdv-slowness", title: "Lentidão no PDV" },
         { id: "vnc-error", title: "Erro no VNC" },
-        { id: "biometrico-hamster", title: "Leitor Biométrico Hamster" }
+        { id: "biometrico-hamster", title: "Leitor Biométrico Hamster" },
+        { id: "ramuza-carga", title: "Carga de Balança Ramuza" },
+        { id: "sdsync-instalacao-validacao", title: "SDSync: Instalação e Carga" }
       ]
     },
     {
@@ -123,7 +128,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:static lg:flex lg:flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
+        fixed lg:static flex flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         lg:h-screen lg:overflow-hidden
       `}>
@@ -145,7 +150,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
           </Button>
         </div>
 
-        <ScrollArea className="flex-1">
+        <ScrollArea className="flex-1 min-h-0">
           <nav className="space-y-2 p-4">
             {sections.map((section) => {
               const Icon = section.icon;
@@ -159,7 +164,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
                         : 'hover:bg-muted text-muted-foreground hover:text-foreground'
                       }
                     `}
-                    onClick={() => onSectionChange(section.items[0].id)}
+                      onClick={() => { onSectionChange(section.items[0].id); setSidebarOpen(false); }}
                   >
                     <Icon className="h-4 w-4" />
                     <span className="font-medium">{section.title}</span>
@@ -167,19 +172,20 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
                   </div>
                   
                   {section.items.map((item) => (
-                    <button
+                    <Button
+                      variant="ghost"
                       key={item.id}
                       className={`
-                        w-full text-left px-6 py-2 text-sm rounded-md transition-colors
+                        w-full justify-start h-auto whitespace-normal text-left px-6 py-2 text-sm rounded-md transition-colors
                         ${currentSection === item.id
                           ? 'bg-primary text-primary-foreground shadow-soft'
                           : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                         }
                       `}
-                      onClick={() => onSectionChange(item.id)}
+                      onClick={() => { onSectionChange(item.id); setSidebarOpen(false); }}
                     >
                       {item.title}
-                    </button>
+                    </Button>
                   ))}
                 </div>
               );
@@ -212,7 +218,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }: DocLayoutProps
         </header>
 
         {/* Content */}
-        <main className="flex-1 overflow-y-auto overflow-x-hidden lg:overflow-y-auto">
+        <main className="flex-1 overflow-y-auto min-h-0 overflow-x-hidden lg:overflow-y-auto">
           <div className="max-w-4xl mx-auto p-6">
             {children}
           </div>
