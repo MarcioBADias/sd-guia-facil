@@ -8,6 +8,7 @@ import DivergenceChecker from "./DivergenceChecker";
 import RejeitadasCorrecao from "./RejeitadasCorrecao";
 import { Checkbox } from "@/components/ui/checkbox";
 import AdditionalManuals, { isAdditionalManual } from "./AdditionalManuals";
+import NoteSendingFailure from "./NoteSendingFailure";
 
 const VideoCard = ({ title, videoId, description }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -52,6 +53,7 @@ const VideoCard = ({ title, videoId, description }) => {
 };
 
 const DocumentationContent = ({ section }) => {
+  if (section === "note-sending-failure") return <NoteSendingFailure />;
   if (isAdditionalManual(section)) return <AdditionalManuals section={section} />;
   const renderContent = () => {
     switch (section) {

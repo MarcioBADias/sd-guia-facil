@@ -101,6 +101,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
       items: [
         { id: "pdv-slowness", title: "Lentidão no PDV" },
         { id: "vnc-error", title: "Erro no VNC" },
+        { id: "note-sending-failure", title: "Falha no envio de nota" },
         { id: "biometrico-hamster", title: "Leitor Biométrico Hamster" },
         { id: "ramuza-carga", title: "Carga de Balança Ramuza" },
         { id: "sdsync-instalacao-validacao", title: "SDSync: Instalação e Carga" }
