@@ -117,18 +117,18 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
   ];
 
   return (
-    <div className="flex h-screen bg-background lg:h-screen lg:overflow-hidden">
+    <div className="flex h-dvh overflow-hidden bg-background">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+          className="fixed inset-0 z-40 bg-foreground/50 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:static flex flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
+        fixed lg:static flex flex-col inset-y-0 left-0 z-50 w-72 max-w-[85vw] shrink-0 bg-card border-r transform transition-transform motion-reduce:transition-none
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         lg:h-screen lg:overflow-hidden
       `}>
@@ -144,6 +144,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
             variant="ghost"
             size="sm"
             className="lg:hidden"
+            aria-label="Fechar menu"
             onClick={() => setSidebarOpen(false)}
           >
             <X className="h-4 w-4" />
@@ -151,7 +152,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
         </div>
 
         <ScrollArea className="flex-1 min-h-0">
-          <nav className="space-y-2 p-4">
+          <nav className="space-y-2 p-3">
             {sections.map((section) => {
               const Icon = section.icon;
               return (
@@ -166,9 +167,9 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
                     `}
                       onClick={() => { onSectionChange(section.items[0].id); setSidebarOpen(false); }}
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-4 w-4 shrink-0" />
                     <span className="font-medium">{section.title}</span>
-                    <ChevronRight className="h-3 w-3 ml-auto" />
+                    <ChevronRight className="h-3 w-3 ml-auto shrink-0" />
                   </div>
                   
                   {section.items.map((item) => (
@@ -195,18 +196,19 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col overflow-hidden lg:overflow-hidden">
+      <div className="flex-1 min-w-0 min-h-0 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="flex items-center gap-4 p-4 border-b bg-card flex-shrink-0">
           <Button
             variant="ghost"
             size="sm"
             className="lg:hidden"
+            aria-label="Abrir menu"
             onClick={() => setSidebarOpen(true)}
           >
             <Menu className="h-4 w-4" />
           </Button>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <h1 className="text-xl font-semibold text-card-foreground">
               Documentação SD Informática
             </h1>
@@ -219,7 +221,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
 
         {/* Content */}
         <main className="flex-1 overflow-y-auto min-h-0 overflow-x-hidden lg:overflow-y-auto">
-          <div className="max-w-4xl mx-auto p-6">
+          <div className="max-w-4xl min-w-0 mx-auto p-4 sm:p-6">
             {children}
           </div>
         </main>
