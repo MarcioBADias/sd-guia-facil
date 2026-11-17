@@ -7,14 +7,9 @@ import DuplicateChecker from "./DuplicateChecker";
 import DivergenceChecker from "./DivergenceChecker";
 import RejeitadasCorrecao from "./RejeitadasCorrecao";
 import { Checkbox } from "@/components/ui/checkbox";
+import AdditionalManuals, { isAdditionalManual } from "./AdditionalManuals";
 
-interface VideoCardProps {
-  title: string;
-  videoId: string;
-  description?: string;
-}
-
-const VideoCard = ({ title, videoId, description }: VideoCardProps) => {
+const VideoCard = ({ title, videoId, description }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -56,11 +51,8 @@ const VideoCard = ({ title, videoId, description }: VideoCardProps) => {
   );
 };
 
-interface DocumentationContentProps {
-  section: string;
-}
-
-const DocumentationContent = ({ section }: DocumentationContentProps) => {
+const DocumentationContent = ({ section }) => {
+  if (isAdditionalManual(section)) return <AdditionalManuals section={section} />;
   const renderContent = () => {
     switch (section) {
       case "introduction":
@@ -339,7 +331,7 @@ WMIC computersystem where name="%computername%" call rename name="SDPdv01"
                 </CodeBlock>
                 <CodeBlock title="Credenciais Gsurf">
 Login: Fernando_Silva
-Senha: SD@info1525!@#
+Senha: SD2026@OTP!@#
                 </CodeBlock>
                 <div>
                   <p className="text-sm">Processo:</p>
