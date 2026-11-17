@@ -128,7 +128,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
 
       {/* Sidebar */}
       <aside className={`
-        fixed lg:static lg:flex lg:flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
+        fixed lg:static flex flex-col inset-y-0 left-0 z-50 w-80 bg-card border-r transform transition-transform
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         lg:h-screen lg:overflow-hidden
       `}>
@@ -150,7 +150,7 @@ const DocLayout = ({ children, currentSection, onSectionChange }) => {
           </Button>
         </div>
 
-        <ScrollArea className="flex-1">
+        <ScrollArea className="flex-1 min-h-0">
           <nav className="space-y-2 p-4">
             {sections.map((section) => {
               const Icon = section.icon;
